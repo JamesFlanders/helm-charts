@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedtest-tracker-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedtest-tracker
+  template:
+    metadata:
+      labels:
+        app: speedtest-tracker
+    spec:
+      containers:
+        - name: speedtest-tracker
+          image: lscr.io/linuxserver/speedtest-tracker:latest
+          env:
+            - name: APP_KEY
+              value: "base64:h0hu0NV4f8hhxzrWgoNrtbLCcJOGMBD/1TkOe58wv6Y="
+            - name: DB_CONNECTION
+              value: "sqlite"
+            - name: SPEEDTEST_SCHEDULE
+              value: "*/15 * * * *"
+            - name: APP_TIMEZONE
+              value: "Europe/Brussels"
+            - name: DISPLAY_TIMEZONE
+              value: "Europe/Brussels"
+            - name: CHART_DATETIME_FORMAT
+              value: "j/m/y G:i"
+            - name: DATETIME_FORMAT
+              value: "j M Y, G:i:s"
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+          volumeMounts:
+            - name: speedtest-tracker-config
+              mountPath: /config
+      volumes:
+        - name: speedtest-tracker-config
+          persistentVolumeClaim:
+            claimName: speedtest-tracker-config-pvc

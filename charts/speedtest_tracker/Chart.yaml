@@ -1,0 +1,30 @@
+apiVersion: v1
+name: speedtest_tracker
+description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
+home: https://docs.speedtest-tracker.dev/
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/speedtest-tracker-logo.png
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+
+version: 1.0.0
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application.
+appVersion: v1.3.0
+
+sources:
+    - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
+
+maintainers:
+    - name: James Flanders
+      email: jens.caenen@telenet.be

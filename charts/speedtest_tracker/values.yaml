@@ -1,0 +1,4 @@
+app: "speedtest_tracker"
+instance: "thebe"
+
+host: "speedtest.caenen.net"
