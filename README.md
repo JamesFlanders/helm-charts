@@ -1,3 +1,14 @@
+<p align="center">
+<img src="https://helm.sh/img/helm.svg" alt="Logo" width="200" height="200"/>
+</p>
+<h1 align="center">Helm Charts</h1>
+<p align="center">
+<a href="https://github.com/JamesFlanders/helm-charts/actions/workflows/release.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/JamesFlanders/helm-charts/release.yml"></a>
+<a href="https://opensource.org/licenses/MIT"><img alt="GitHub License" src="https://img.shields.io/github/license/JamesFlanders/helm-charts"></a>
+</p>
+
+---
+
 # Introduction
 
 This is repository is a collection of Helm Charts built for my own homelab. Which means that the Helm Charts provided
@@ -26,4 +37,5 @@ But a lot of them are common between all charts. These common values and their p
 # Usage
 
 ## Usage within Portainer
+
 _To be documented_
