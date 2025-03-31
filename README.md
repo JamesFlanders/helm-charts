@@ -38,4 +38,9 @@ But a lot of them are common between all charts. These common values and their p
 
 ## Usage within Portainer
 
-_To be documented_
+Chart URL: https://JamesFlanders.github.io/helm-charts
+
+1. Find in the navigation the Administration section, and here navigate to `Settings > General`
+2. Scroll down to the `Kubernetes` section
+3. Fill in the URL of this chart into the `URL` field in the Helm Repository section
+4. Click on `Save kubernetes settings`
