@@ -15,4 +15,4 @@ spec:
               service:
                 name: nodered-service
                 port:
-                  number: 80
+                  number: 1880
