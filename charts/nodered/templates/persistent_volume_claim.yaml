@@ -1,0 +1,13 @@
+{{ if .Values.include_volumes }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nodered-data-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 1Gi
+{{ end }}

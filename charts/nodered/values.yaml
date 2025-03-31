@@ -1,0 +1,11 @@
+# Name of the application
+app: "nodered"
+
+# Name of the instance of the application.
+instance: "adrastea"
+
+# Name of the DNS record to link to the container.
+host: "nodered.caenen.net"
+
+# Include the creation of the PersistentVolumeClaim
+include_volumes: false
