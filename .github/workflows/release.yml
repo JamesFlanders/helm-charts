@@ -16,12 +16,20 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Create 'gh-pages' branch for releasing Helm charts
+        continue-on-error: true
+        run: |
+          git checkout -b gh-pages || exit 1
+          git rebase main
+          git push origin gh-pages
+          git checkout main
+
       - name: Configure Git User
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Release Charts
+      - name: Release Helm charts
         uses: helm/chart-releaser-action@v1.7.0
         with:
           charts_dir: charts
