@@ -44,3 +44,10 @@ Chart URL: https://JamesFlanders.github.io/helm-charts
 2. Scroll down to the `Kubernetes` section
 3. Fill in the URL of this chart into the `URL` field in the Helm Repository section
 4. Click on `Save kubernetes settings`
+
+
+# License
+
+[MIT License](https://opensource.org/licenses/MIT)\
+Copyright (c) 2024 [James Flanders](https://github.com/JamesFlanders)
+
