@@ -1,4 +1,11 @@
+# Name of the application
 app: "speedtest_tracker"
+
+# Name of the instance of the application.
 instance: "thebe"
 
+# Name of the DNS record to link to the container.
 host: "speedtest.caenen.net"
+
+# Include the creation of the PersistentVolumeClaim
+include_volumes: false
