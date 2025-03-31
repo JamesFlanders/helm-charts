@@ -3,6 +3,23 @@ entries:
   nodered:
   - apiVersion: v1
     appVersion: v4.0.9
+    created: "2025-03-31T18:01:47.375842237Z"
+    description: Helm chart used to deploy the NodeRED for Kubernetes
+    digest: 30119602c6b5f7f329549d9c0b735d1ce2636d6296cc84d15ff5c1cb721848da
+    home: https://nodered.org/
+    icon: https://nodered.org/about/resources/media/node-red-icon.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: nodered
+    sources:
+    - https://judelabs.substack.com/p/deploying-node-red-on-kubernetes
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/nodered-0.1.1/nodered-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: v4.0.9
     created: "2025-03-31T17:50:16.311078808Z"
     description: Helm chart used to deploy the NodeRED for Kubernetes
     digest: c75216432a2ef8bfb64e3cedb7ad5998c586f5d1647182c4b66579715efc63b4
@@ -36,4 +53,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest_tracker-0.1.0/speedtest_tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-31T17:50:16.311089919Z"
+generated: "2025-03-31T18:01:47.375850402Z"
