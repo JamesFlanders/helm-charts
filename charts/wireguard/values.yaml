@@ -1,0 +1,37 @@
+###############################################################
+# Common Values
+###############################################################
+
+# Name of the application
+app: "wireguard"
+
+# Name of the instance of the application.
+instance: "lysithea"
+
+# Name of the DNS record to link to the container.
+host:
+  server: "vpn.caenen.net"
+  ui: "wireguard.caenen.net"
+
+# Include the creation of the PersistentVolumeClaim
+include_volumes: false
+
+###############################################################
+# Specific Values
+###############################################################
+# DNS used by the Wireguard clients
+dns: "192.168.0.5,192.168.0.6"
+
+# Network used for assigning IPs to the Wireguard clients
+network: "192.168.254.x"
+
+# Port of the Wireguard server
+port: 51820
+
+# List of allowed IP ranges to connect to the Wireguard server
+allowed_ips: "0.0.0.0/0"
+
+# Firewall settings for the Wireguard server (POST_UP and POST_DOWN)
+firewall:
+  post_up: "iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth+ -j MASQUERADE"
+  post_down: "iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth+ -j MASQUERADE"

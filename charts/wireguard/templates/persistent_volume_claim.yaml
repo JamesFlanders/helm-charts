@@ -1,0 +1,37 @@
+{{ if .Values.include_volumes }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wireguard-etc-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 100mb
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wireguard-config-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 100mb
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wireguard-modules-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 100mb
+{{ end }}
