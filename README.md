@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://helm.sh/img/helm.svg" alt="Logo" width="200" height="200"/>
+<img src="https://i.imgur.com/9xbQw9j.png" alt="Logo" width="250" height="250"/>
 </p>
 <h1 align="center">Helm Charts</h1>
 <p align="center">
