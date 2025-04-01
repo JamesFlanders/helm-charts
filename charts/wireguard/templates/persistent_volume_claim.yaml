@@ -33,5 +33,5 @@ spec:
   storageClassName: nfs
   resources:
     requests:
-      storage: 100mb
+      storage: 50mb
 {{ end }}
