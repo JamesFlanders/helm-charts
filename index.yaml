@@ -87,4 +87,20 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest_tracker-0.1.0/speedtest_tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-01T15:41:01.181271202Z"
+  wireguard:
+  - apiVersion: v1
+    appVersion: v14.0.0
+    created: "2025-04-01T15:47:37.408874438Z"
+    description: Helm chart used to deploy Wireguard for Kubernetes
+    digest: a34feba675bc22604d6fbf9435b46253e13549f4d14ab98048132744eb55045e
+    home: https://github.com/wg-easy/wg-easy
+    icon: https://static-00.iconduck.com/assets.00/wireguard-icon-1024x1024-78n6jncy.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: wireguard
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/wireguard-0.1.0/wireguard-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-04-01T15:47:37.408895778Z"
