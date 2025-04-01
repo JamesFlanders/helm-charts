@@ -20,19 +20,19 @@ spec:
             - sysctl -w net.ipv4.conf.all.src_valid_mark=1
           env:
             - name: WG_HOST
-              value: {{ .Values.host.server}}
+              value: "{{ .Values.host.server}}"
             - name: WG_DEFAULT_DNS
-              value: {{ .Values.dns}}
+              value: "{{ .Values.dns}}"
             - name: WG_DEFAULT_ADDRESS
-              value: {{ .Values.network}}
+              value: "{{ .Values.network}}"
             - name: WG_PORT
-              value: {{ .Values.port }}
+              value: "{{ .Values.port }}"
             - name: WG_ALLOWED_IPS
-              value: {{ .Values.allowed_ips }}
+              value: "{{ .Values.allowed_ips }}"
             - name: WG_POST_UP
-              value: {{ .Values.firewall.post_up }}
+              value: "{{ .Values.firewall.post_up }}"
             - name: WG_POST_DOWN
-              value: {{ .Values.firewall.post_down }}
+              value: "{{ .Values.firewall.post_down }}"
           securityContext:
             capabilities:
               add: [ "NET_ADMIN", "SYS_MODULE" ]
