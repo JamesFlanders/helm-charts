@@ -12,17 +12,14 @@ spec:
       labels:
         app: wireguard
     spec:
-      initContainers:
-        - command:
+      containers:
+        - name: wireguard
+          image: ghcr.io/wg-easy/wg-easy:14
+          command:
             - sh
             - "-c"
             - sysctl -w net.ipv4.ip_forward=1
             - sysctl -w net.ipv4.conf.all.src_valid_mark=1
-          image: busybox
-          name: wireguard-sysctl
-      containers:
-        - name: wireguard
-          image: ghcr.io/wg-easy/wg-easy:14
           env:
             - name: WG_HOST
               value: "{{ .Values.host.server}}"
