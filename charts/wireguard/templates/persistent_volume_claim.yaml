@@ -9,7 +9,7 @@ spec:
   storageClassName: nfs
   resources:
     requests:
-      storage: 100mb
+      storage: 100M
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -21,7 +21,7 @@ spec:
   storageClassName: nfs
   resources:
     requests:
-      storage: 100mb
+      storage: 100M
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -33,5 +33,5 @@ spec:
   storageClassName: nfs
   resources:
     requests:
-      storage: 50mb
+      storage: 50M
 {{ end }}
