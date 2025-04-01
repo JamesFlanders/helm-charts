@@ -90,6 +90,21 @@ entries:
   wireguard:
   - apiVersion: v1
     appVersion: v14.0.0
+    created: "2025-04-01T16:15:20.022100065Z"
+    description: Helm chart used to deploy Wireguard for Kubernetes
+    digest: b8f613805501f896cd6e6f7911a9acd76f0c89c917f6b8b6cc390c53d58546f1
+    home: https://github.com/wg-easy/wg-easy
+    icon: https://static-00.iconduck.com/assets.00/wireguard-icon-1024x1024-78n6jncy.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: wireguard
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/wireguard-0.1.3/wireguard-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: v14.0.0
     created: "2025-04-01T16:07:16.766315514Z"
     description: Helm chart used to deploy Wireguard for Kubernetes
     digest: 63c9c48ec091900e52a29a23343302d3053946fa9357cd81ac94fe0126f7098c
@@ -133,4 +148,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/wireguard-0.1.0/wireguard-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-01T16:07:16.7663345Z"
+generated: "2025-04-01T16:15:20.02212952Z"
