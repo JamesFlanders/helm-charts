@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minecraft-java-edition-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft-java-edition
+  template:
+    metadata:
+      labels:
+        app: minecraft-java-edition
+    spec:
+      containers:
+      - name: minecraft-java-edition
+        image: itzg/minecraft-server
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 25565
+            name: minecraft
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 500m
+            memory: 2Gi
+        env:
+        - name: EULA
+          value: "TRUE"
+        - name: TYPE
+          value: "PAPER"
+        - name: INIT_MEMORY
+          value: "1G"
+        - name: MAX_MEMORY
+          value: "2G"
+        volumeMounts:
+        - name: minecraft-java-edition-data
+          mountPath: /data
+      volumes:
+      - name: minecraft-java-edition-data
+        persistentVolumeClaim:
+          claimName: minecraft-java-edition-data-pvc
