@@ -1,5 +1,25 @@
 apiVersion: v1
 entries:
+  minecraft-java-edition:
+  - apiVersion: v1
+    appVersion: 1.21.5
+    created: "2025-04-10T17:27:55.946836881Z"
+    description: Helm chart used to deploy the Minecraft Java Edition for Kubernetes
+    digest: b501e888a3b33f26d4e92645bec5305187396adbc9657f760b3e857fc54dcc33
+    home: https://www.minecraft.net/
+    icon: https://images.icon-icons.com/2699/PNG/512/minecraft_logo_icon_168974.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: minecraft-java-edition
+    sources:
+    - https://www.civo.com/learn/deploying-minecraft-server-kubernetes
+    - https://docker-minecraft-server.readthedocs.io/en/latest/
+    - https://github.com/itzg/minecraft-server-charts
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/minecraft-java-edition-0.1.0/minecraft-java-edition-0.1.0.tgz
+    version: 0.1.0
   nodered:
   - apiVersion: v1
     appVersion: v4.0.9
@@ -208,4 +228,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/wireguard-0.1.0/wireguard-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-01T17:33:01.278854353Z"
+generated: "2025-04-10T17:27:55.946868129Z"
