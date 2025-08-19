@@ -4,6 +4,9 @@ metadata:
   name: nodered-ingress
   annotations:
     app.kubernetes.io/ingress.class: "traefik"
+    traefik.ingress.kubernetes.io/router.entrypoints: http,https
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.tls.certresolver: default
 spec:
   rules:
     - host: {{ .Values.host }}
