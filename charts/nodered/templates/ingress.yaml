@@ -16,3 +16,7 @@ spec:
                 name: nodered-service
                 port:
                   number: 1880
+  tls:
+    - hosts:
+        - {{ .Values.host }}
+      secretName: caenen-net-tls   # Reuse the wildcard cert
