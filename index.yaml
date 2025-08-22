@@ -123,6 +123,24 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/nodered-0.1.0/nodered-0.1.0.tgz
     version: 0.1.0
+  portainer_agent:
+  - apiVersion: v1
+    appVersion: v1.3.0
+    created: "2025-08-22T12:29:38.962808813Z"
+    description: Helm chart used to deploy the Portainer Agent for Kubernetes
+    digest: dd587858585a050a39ada43b0c1be2bd183c85663456c5f50dcb04b745b279ce
+    home: https://www.portainer.io/
+    icon: https://cdn.worldvectorlogo.com/logos/portainer.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: portainer_agent
+    sources:
+    - https://downloads.portainer.io/ee2-32/portainer-agent-k8s-lb.yaml
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/portainer_agent-0.1.0/portainer_agent-0.1.0.tgz
+    version: 0.1.0
   speedtest_tracker:
   - apiVersion: v1
     appVersion: v1.3.0
@@ -279,4 +297,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/wireguard-0.1.0/wireguard-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-20T08:45:11.799611876Z"
+generated: "2025-08-22T12:29:38.962841032Z"
