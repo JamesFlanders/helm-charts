@@ -1,8 +1,8 @@
 apiVersion: v1
-name: speedtest_tracker
-description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
-home: https://docs.speedtest-tracker.dev/
-icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/speedtest-tracker-logo.png
+name: portainer_agent
+description: Helm chart used to deploy the Portainer Agent for Kubernetes
+home: https://www.portainer.io/
+icon: https://cdn.worldvectorlogo.com/logos/portainer.svg
 
 type: application
 
@@ -10,7 +10,7 @@ version: 0.1.0
 appVersion: v1.3.0
 
 sources:
-    - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
+    - https://downloads.portainer.io/ee2-32/portainer-agent-k8s-lb.yaml
 
 maintainers:
     - name: James Flanders
