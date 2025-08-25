@@ -1,12 +1,12 @@
 apiVersion: v1
-name: portainer_agent
+name: portainer-agent
 description: Helm chart used to deploy the Portainer Agent for Kubernetes
 home: https://www.portainer.io/
 icon: https://cdn.worldvectorlogo.com/logos/portainer.svg
 
 type: application
 
-version: 0.1.1
+version: 0.1.0
 appVersion: v1.3.0
 
 sources:
