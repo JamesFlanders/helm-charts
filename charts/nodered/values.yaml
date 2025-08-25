@@ -5,9 +5,6 @@
 # Name of the application
 app: "nodered"
 
-# Name of the instance of the application.
-instance: "adrastea"
-
 ###############################################################
 # Accessibility
 ###############################################################
