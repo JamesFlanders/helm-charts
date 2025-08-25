@@ -1,27 +1,26 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: portainer-agent-daemonset
-  namespace: kube-portainer-agent
+  name: {{ .Values.app }}-daemonset
 spec:
   selector:
     matchLabels:
-      app: portainer-agent
+      app: {{ .Values.app }}
   template:
     metadata:
       labels:
-        app: portainer-agent
+        app: {{ .Values.app }}
     spec:
-      serviceAccountName: portainer-agent-sa-clusteradmin
+      serviceAccountName: {{ .Values.app }}-sa-clusteradmin
       containers:
-      - name: portainer-agent
+      - name: {{ .Values.app }}
         image: portainer/agent:2.27.3
         imagePullPolicy: Always
         env:
         - name: LOG_LEVEL
           value: DEBUG
         - name: AGENT_CLUSTER_ADDR
-          value: "portainer-agent-headless-service"
+          value: "{{ .Values.app }}-headless-service"
         - name: KUBERNETES_POD_IP
           valueFrom:
             fieldRef:
