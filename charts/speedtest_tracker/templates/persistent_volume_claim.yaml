@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: speedtest-tracker-config-pvc
+  name: {{ .Values.app }}-config-pvc
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: nfs
+  storageClassName: {{ .Values.storage_class_name }}
   resources:
     requests:
-      storage: 1Gi
+      storage: {{ .Values.storage_size }}
 {{ end }}

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: speedtest-tracker-deployment
+  name: {{ .Values.app }}-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: speedtest-tracker
+      app: {{ .Values.app }}
   template:
     metadata:
       labels:
-        app: speedtest-tracker
+        app: {{ .Values.app }}
     spec:
       containers:
-        - name: speedtest-tracker
+        - name: {{ .Values.app }}
           image: lscr.io/linuxserver/speedtest-tracker:latest
           env:
             - name: APP_KEY
@@ -35,9 +35,9 @@ spec:
               name: http
               protocol: TCP
           volumeMounts:
-            - name: speedtest-tracker-config
+            - name: {{ .Values.app }}-config
               mountPath: /config
       volumes:
-        - name: speedtest-tracker-config
+        - name: {{ .Values.app }}-config
           persistentVolumeClaim:
-            claimName: speedtest-tracker-config-pvc
+            claimName: {{ .Values.app }}-config-pvc
