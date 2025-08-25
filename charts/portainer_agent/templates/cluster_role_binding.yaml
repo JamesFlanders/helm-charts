@@ -9,3 +9,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.app }}-sa-clusteradmin
+  namespace: {{ .Release.Namespace }}
