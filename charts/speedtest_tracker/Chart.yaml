@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linu
 
 type: application
 
-version: 0.0.1
+version: 0.1.0
 appVersion: v1.3.0
 
 sources:
