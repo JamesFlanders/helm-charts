@@ -10,4 +10,4 @@ spec:
   commonName: caenen.net
   dnsNames:
   - caenen.net
-  - "nodered.caenen.net"
+  - "{{ .Values.host }}"
