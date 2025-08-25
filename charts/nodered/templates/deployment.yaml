@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodered-deployment
+  name: {{ .Values.app }}-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodered
+      app: {{ .Values.app }}
   template:
     metadata:
       labels:
-        app: nodered
+        app: {{ .Values.app }}
     spec:
       containers:
-      - name: nodered
+      - name: {{ .Values.app }}
         image: nodered/node-red:latest
         ports:
         - containerPort: 1880
           name: http
           protocol: TCP
         volumeMounts:
-        - name: nodered-data
+        - name: {{ .Values.app }}-data
           mountPath: /data
       volumes:
-      - name: nodered-data
+      - name: {{ .Values.app }}-data
         persistentVolumeClaim:
-          claimName: nodered-data-pvc
+          claimName: {{ .Values.app }}-data-pvc

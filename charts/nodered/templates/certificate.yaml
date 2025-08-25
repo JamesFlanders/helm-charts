@@ -1,9 +1,9 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: nodered-certificate
+  name: {{ .Values.app }}-certificate
 spec:
-  secretName: nodered-caenen-net-tls
+  secretName: {{ .Values.app }}-caenen-net-tls
   issuerRef:
     name: cert-manager-cluster-issuer
     kind: ClusterIssuer

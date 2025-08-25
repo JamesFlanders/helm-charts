@@ -1,5 +1,5 @@
 ###############################################################
-# Common Values
+# Common
 ###############################################################
 
 # Name of the application
@@ -8,8 +8,24 @@ app: "nodered"
 # Name of the instance of the application.
 instance: "adrastea"
 
+###############################################################
+# Accessibility
+###############################################################
+
 # Name of the DNS record to link to the container.
 host: "nodered.caenen.net"
 
+###############################################################
+# Volumes and Storage
+###############################################################
+
 # Include the creation of the PersistentVolumeClaim
 include_volumes: false
+
+##### The following parameters only apply if 'include_volumes' is set to 'true' #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "500Mi"
