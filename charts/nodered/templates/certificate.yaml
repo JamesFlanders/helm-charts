@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nodered-certificate
+spec:
+  secretName: nodered-caenen-net-tls
+  issuerRef:
+    name: cert-manager-cluster-issuer
+    kind: ClusterIssuer
+  commonName: caenen.net
+  dnsNames:
+  - caenen.net
+  - "nodered.caenen.net"
