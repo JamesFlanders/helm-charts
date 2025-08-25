@@ -5,9 +5,6 @@
 # Name of the application
 app: "speedtest-tracker"
 
-# Name of the instance of the application.
-instance: "thebe"
-
 ###############################################################
 # Accessibility
 ###############################################################
