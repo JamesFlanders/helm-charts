@@ -30,7 +30,6 @@ But a lot of them are common between all charts. These common values and their p
 | Name            | Description/Purpose                                       | Default Value                                                                               |
 |-----------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | app             | Name of the application (e.g. AdGuard, Minecraft, etc...) | <Depends on application>                                                                    |
-| instance        | Name of the instance of the application                   | <Depends on instance (Generally named after a Jupiter moon in the context of my homelab)>   |
 | host            | Name of the DNS record to link to the container           | <Domain name used by myself (In the homelab this is generally '<domain>.caenen.net')>       |
 | include_volumes | Include the creation of the PersistentVolumeClaim         | `false` (When you want to create the PVCs for the first time, then set this value to 'true' |
 
