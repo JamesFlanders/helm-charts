@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  nodered:
+  - apiVersion: v1
+    appVersion: v4.0.9
+    created: "2025-08-25T20:38:29.940376601Z"
+    description: Helm chart used to deploy the NodeRED for Kubernetes
+    digest: ea08bb5ef31608ea6cc07684895691e2f85b48bfcc06f7c7d508eea84c5b7a04
+    home: https://nodered.org/
+    icon: https://nodered.org/about/resources/media/node-red-icon.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: nodered
+    sources:
+    - https://judelabs.substack.com/p/deploying-node-red-on-kubernetes
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/nodered-0.1.0/nodered-0.1.0.tgz
+    version: 0.1.0
+  portainer_agent:
+  - apiVersion: v1
+    appVersion: v1.3.0
+    created: "2025-08-25T20:38:30.092168633Z"
+    description: Helm chart used to deploy the Portainer Agent for Kubernetes
+    digest: 10d00e184a7388806bbd7c55e457c874c22b21ac24706191d1378d0935a4c324
+    home: https://www.portainer.io/
+    icon: https://cdn.worldvectorlogo.com/logos/portainer.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: portainer_agent
+    sources:
+    - https://downloads.portainer.io/ee2-32/portainer-agent-k8s-lb.yaml
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/portainer_agent-0.1.0/portainer_agent-0.1.0.tgz
+    version: 0.1.0
+  speedtest_tracker:
+  - apiVersion: v1
+    appVersion: v1.3.0
+    created: "2025-08-25T20:38:30.24582585Z"
+    description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
+    digest: ac94723d4221b5b460845c68ba5e2ca521a997667537440bfbf105c7d331f3c5
+    home: https://docs.speedtest-tracker.dev/
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/speedtest-tracker-logo.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: speedtest_tracker
+    sources:
+    - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest_tracker-0.1.0/speedtest_tracker-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-08-25T20:38:30.24583129Z"
