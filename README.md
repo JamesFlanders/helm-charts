@@ -20,18 +20,17 @@ or might not even work. These requirements are listed below, but use at your own
 
 - An NFS-share as storage class should be provided with the name 'nfs'
 
-# Common Values
+# Values YAML
 
 All these charts make use of a YAML file called `values.yaml`. This file can be used to configure the charts to be able
 to reuse them in different ways. Some of the variables defined in here are unique to the application that is being
-deployed.
-But a lot of them are common between all charts. These common values and their purpose are listed below:
+deployed:
 
-| Name            | Description/Purpose                                       | Default Value                                                                               |
-|-----------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| app             | Name of the application (e.g. AdGuard, Minecraft, etc...) | <Depends on application>                                                                    |
-| host            | Name of the DNS record to link to the container           | <Domain name used by myself (In the homelab this is generally '<domain>.caenen.net')>       |
-| include_volumes | Include the creation of the PersistentVolumeClaim         | `false` (When you want to create the PVCs for the first time, then set this value to 'true' |
+| Name            | Category            | Description/Purpose                                       | Default Value                                                                               |
+|-----------------|---------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| app             | Common              | Name of the application (e.g. AdGuard, Minecraft, etc...) | <Depends on application>                                                                    |
+| host            | Accessibility       | Name of the DNS record to link to the container           | <Domain name used by myself (In the homelab this is generally '<domain>.caenen.net')>       |
+| include_volumes | Volumes and Storage | Include the creation of the PersistentVolumeClaim         | `false` (When you want to create the PVCs for the first time, then set this value to 'true' |
 
 # Usage
 
@@ -43,7 +42,6 @@ Chart URL: https://JamesFlanders.github.io/helm-charts
 2. Scroll down to the `Kubernetes` section
 3. Fill in the URL of this chart into the `URL` field in the Helm Repository section
 4. Click on `Save kubernetes settings`
-
 
 # License
 
