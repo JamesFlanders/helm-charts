@@ -30,6 +30,10 @@ spec:
               value: "j/m/y G:i"
             - name: DATETIME_FORMAT
               value: "j M Y, G:i:s"
+            - name: APP_URL
+              value: "https://{{ .Values.host }}"
+            - name: ASSET_URL
+              value: "https://{{ .Values.host }}"
           ports:
             - containerPort: 443
               name: https
