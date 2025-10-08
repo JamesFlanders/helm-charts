@@ -39,6 +39,23 @@ entries:
   speedtest-tracker:
   - apiVersion: v1
     appVersion: v1.3.0
+    created: "2025-10-08T16:37:52.748641172Z"
+    description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
+    digest: ba4736c04b55b448563b0890ad06d17c82a9f088e66bafdb84decb1f471657f3
+    home: https://docs.speedtest-tracker.dev/
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/speedtest-tracker-logo.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: speedtest-tracker
+    sources:
+    - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest-tracker-0.1.1/speedtest-tracker-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: v1.3.0
     created: "2025-08-25T21:41:11.932673287Z"
     description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
     digest: dddf1f0542ae203ac988cbc68572470590d187fed1184d60f9642ac07ea4f2aa
@@ -54,4 +71,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest-tracker-0.1.0/speedtest-tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-25T21:41:11.932682745Z"
+generated: "2025-10-08T16:37:52.74865577Z"
