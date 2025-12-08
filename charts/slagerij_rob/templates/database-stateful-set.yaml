@@ -33,6 +33,8 @@ spec:
                 secretKeyRef:
                   key: password
                   name: {{ .Values.app }}-database-secret
+            - name: POSTGRES_DB
+              value: slagerij_rob
       volumes:
         - name: {{ .Values.app }}-data
           persistentVolumeClaim:
