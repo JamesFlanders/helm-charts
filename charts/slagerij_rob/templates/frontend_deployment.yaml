@@ -20,4 +20,4 @@ spec:
           name: http
           protocol: TCP
       imagePullSecrets:
-        - name: github-container-registry
+        - name: github-container-registry-secret
