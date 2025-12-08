@@ -36,6 +36,25 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/portainer-agent-0.1.0/portainer-agent-0.1.0.tgz
     version: 0.1.0
+  slagerij-rob:
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2025-12-08T20:50:51.674579806Z"
+    description: Helm chart used to deploy the Slagerij Rob application for Kubernetes
+    digest: 961b14ce93686e78c8d11c72bdeae8e19aad5582e45182eff2627d363cf97dab
+    home: https://github.com/JamesFlanders/
+    icon: https://i.imgur.com/sD0RTlG.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: slagerij-rob
+    sources:
+    - https://github.com/JamesFlanders/slagerij-rob-backend
+    - https://github.com/JamesFlanders/slagerij-rob-frontend
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/slagerij-rob-0.1.0/slagerij-rob-0.1.0.tgz
+    version: 0.1.0
   speedtest-tracker:
   - apiVersion: v1
     appVersion: v1.3.0
@@ -71,4 +90,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest-tracker-0.1.0/speedtest-tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-08T16:37:52.74865577Z"
+generated: "2025-12-08T20:50:51.674587641Z"
