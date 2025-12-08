@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.app }}-backend-ingress
+  annotations:
+    app.kubernetes.io/ingress.class: "traefik"
+spec:
+  tls:
+    - hosts:
+        - slagerij-rob-backend.caenen.net
+      secretName: slagerij-rob-backend-caenen-net-tls
+  rules:
+    - host: slagerij-rob-backend.caenen.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.app }}-backend-service
+                port:
+                  number: 8000
