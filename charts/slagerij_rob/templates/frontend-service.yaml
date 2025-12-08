@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.app }}-frontend-service
+spec:
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 8080
+  selector:
+    app: {{ .Values.app }}-frontend

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Values.app }}-database-stateful-set
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-database
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-database
+    spec:
+      containers:
+        - name: {{ .Values.app }}-database
+          image: postgres:17.6-alpine
+          ports:
+            - containerPort: 5432
+              name: http
+              protocol: TCP
+          volumeMounts:
+            - name: {{ .Values.app }}-data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: {{ .Values.app }}-data
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-data-pvc

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-backend
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-backend
+    spec:
+      containers:
+      - name: {{ .Values.app }}-backend
+        image: ghcr.io/jamesflanders/{{.Values.app}}-backend:0.1.0
+        ports:
+        - containerPort: 8000
+          name: http
+          protocol: TCP

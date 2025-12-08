@@ -1,0 +1,18 @@
+apiVersion: v2
+name: slagerij-rob
+description: Helm chart used to deploy the Slagerij Rob application for Kubernetes
+home: https://github.com/JamesFlanders/
+icon: https://i.imgur.com/sD0RTlG.png
+
+type: application
+
+version: 0.1.0
+appVersion: v0.1.0
+
+sources:
+  - https://github.com/JamesFlanders/slagerij-rob-backend
+  - https://github.com/JamesFlanders/slagerij-rob-frontend
+
+maintainers:
+  - name: James Flanders
+    email: jens.caenen@telenet.be
