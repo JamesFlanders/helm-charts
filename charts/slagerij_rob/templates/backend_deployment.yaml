@@ -19,5 +19,26 @@ spec:
         - containerPort: 8000
           name: http
           protocol: TCP
+        env:
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                key: username
+                name: {{ .Values.app }}-database-secret
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: {{ .Values.app }}-database-secret
+          - name: DB_HOSTNAME
+            valueFrom:
+              secretKeyRef:
+                key: hostname
+                name: {{ .Values.app }}-database-secret
+          - name: DB_PORT
+            valueFrom:
+              secretKeyRef:
+                key: port
+                name: {{ .Values.app }}-database-secret
       imagePullSecrets:
         - name: github-container-registry-secret

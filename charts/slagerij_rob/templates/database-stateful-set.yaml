@@ -22,6 +22,17 @@ spec:
           volumeMounts:
             - name: {{ .Values.app }}-data
               mountPath: /var/lib/postgresql/data
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Values.app }}-database-secret
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Values.app }}-database-secret
       volumes:
         - name: {{ .Values.app }}-data
           persistentVolumeClaim:
