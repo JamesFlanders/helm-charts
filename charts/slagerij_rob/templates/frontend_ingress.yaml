@@ -8,7 +8,7 @@ spec:
   tls:
     - hosts:
         - {{ .Values.host }}
-      secretName: {{ .Values.app }}-caenen-net-tls
+      secretName: {{ .Values.app }}-frontend-caenen-net-tls
   rules:
     - host: {{ .Values.host }}
       http:

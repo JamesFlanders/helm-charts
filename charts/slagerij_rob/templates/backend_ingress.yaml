@@ -8,7 +8,7 @@ spec:
   tls:
     - hosts:
         - slagerij-rob-backend.caenen.net
-      secretName: slagerij-rob-backend-caenen-net-tls
+      secretName: {{ .Values.app }}-backend-caenen-net-tls
   rules:
     - host: slagerij-rob-backend.caenen.net
       http:
