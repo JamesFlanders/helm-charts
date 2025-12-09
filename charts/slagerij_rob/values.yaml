@@ -15,7 +15,7 @@ host: "slagerij-rob.caenen.net"
 # Credentials for PostgreSQL Database
 database_username: "f1100679-d0be-40c6-ba85-0a02000eedec"
 database_password: "vHubMfOYpsZ447YU8qF4hjQ42W708k"
-database_hostname: "slagerij-rob-database"
+database_hostname: "slagerij-rob-database-service"
 database_port: "5432"
 
 # Include the creation of the database secret
