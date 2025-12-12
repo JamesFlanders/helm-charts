@@ -19,7 +19,7 @@ port: 25565
 ###############################################################
 
 # Minecraft version to host the server on
-minecraft_version: 1.21.10
+minecraft_version: "1.21.10"
 
 # Whether to the EULA for the Minecraft
 minecraft_eula: true
@@ -28,10 +28,10 @@ minecraft_eula: true
 minecraft_type: "PAPER"
 
 # Initial memory usage on the Minecraft server
-minecraft_init_memory: 2G
+minecraft_init_memory: "2G"
 
 # Maximum memory usage on the Minecraft server
-minecraft_max_memory: 4G
+minecraft_max_memory: "4G"
 
 # Maximum number of players allowed on the Minecraft server
 minecraft_max_players: 20
@@ -40,7 +40,7 @@ minecraft_max_players: 20
 minecraft_pvp: true
 
 # Seed for the initial map generator
-minecraft_seed: ""
+# minecraft_seed: ""
 
 # Timezone for the Minecraft server
 minecraft_timezone: "Europe/Brussels"

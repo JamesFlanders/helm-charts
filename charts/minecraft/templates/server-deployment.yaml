@@ -13,38 +13,41 @@ spec:
         app: {{ .Values.app }}
     spec:
       containers:
-      - name: {{ .Values.app }}
-        image: itzg/minecraft-server:{{.Values.image_tag}}
-        ports:
-        - containerPort: 25565
-          name: tcp
-          protocol: TCP
-        - containerPort: 25565
-          name: udp
-          protocol: UDP
-        env:
-          - name: EULA
-            value: {{ .Values.minecraft_eula }}
-          - name: VERSION
-            value: {{ .Values.minecraft_version }}
-          - name: TYPE
-            value: {{ .Values.minecraft_type }}
-          - name: INIT_MEMORY
-            value: {{ .Values.minecraft_init_memory }}
-          - name: MAX_MEMORY
-            value: {{ .Values.minecraft_max_memory }}
-          - name: MAX_PLAYERS
-            value: {{ .Values.minecraft_max_players }}
-          - name: PVP
-            value: {{ .Values.minecraft_pvp }}
-          - name: SEED
-            value: {{ .Values.minecraft_seed }}
-          - name: TZ
-            value: {{ .Values.minecraft_timezone }}
-        volumeMounts:
-        - name: {{ .Values.app }}-data
-          mountPath: /data
+        - name: {{ .Values.app }}
+          image:
+            itzg/minecraft-server: {{.Values.image_tag}}
+          ports:
+            - containerPort: 25565
+              name: tcp
+              protocol: TCP
+            - containerPort: 25565
+              name: udp
+              protocol: UDP
+          env:
+            - name: EULA
+              value: {{ .Values.minecraft_eula | quote }}
+            - name: VERSION
+              value: {{ .Values.minecraft_version }}
+            - name: TYPE
+              value: {{ .Values.minecraft_type }}
+            - name: INIT_MEMORY
+              value: {{ .Values.minecraft_init_memory }}
+            - name: MAX_MEMORY
+              value: {{ .Values.minecraft_max_memory }}
+            - name: MAX_PLAYERS
+              value: {{ .Values.minecraft_max_players }}
+            - name: PVP
+              value: {{ .Values.minecraft_pvp | quote }}
+            {{ if .Values.minecraft_seed }}
+            - name: SEED
+              value: {{ .Values.minecraft_seed }}
+            {{end}}
+            - name: TZ
+              value: {{ .Values.minecraft_timezone }}
+          volumeMounts:
+            - name: {{ .Values.app }}-data
+              mountPath: /data
       volumes:
-      - name: {{ .Values.app }}-data
-        persistentVolumeClaim:
-          claimName: {{ .Values.app }}-data-pvc
+        - name: {{ .Values.app }}-data
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-data-pvc
