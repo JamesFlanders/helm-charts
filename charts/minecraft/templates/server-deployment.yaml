@@ -26,23 +26,23 @@ spec:
             - name: EULA
               value: {{ .Values.minecraft_eula | quote }}
             - name: VERSION
-              value: {{ .Values.minecraft_version }}
+              value: {{ .Values.minecraft_version | quote }}
             - name: TYPE
-              value: {{ .Values.minecraft_type }}
+              value: {{ .Values.minecraft_type | quote }}
             - name: INIT_MEMORY
-              value: {{ .Values.minecraft_init_memory }}
+              value: {{ .Values.minecraft_init_memory | quote }}
             - name: MAX_MEMORY
-              value: {{ .Values.minecraft_max_memory }}
+              value: {{ .Values.minecraft_max_memory | quote }}
             - name: MAX_PLAYERS
-              value: {{ .Values.minecraft_max_players }}
+              value: {{ .Values.minecraft_max_players | quote }}
             - name: PVP
               value: {{ .Values.minecraft_pvp | quote }}
             {{ if .Values.minecraft_seed }}
             - name: SEED
-              value: {{ .Values.minecraft_seed }}
+              value: {{ .Values.minecraft_seed | quote }}
             {{end}}
             - name: TZ
-              value: {{ .Values.minecraft_timezone }}
+              value: {{ .Values.minecraft_timezone | quote }}
           volumeMounts:
             - name: {{ .Values.app }}-data
               mountPath: /data
