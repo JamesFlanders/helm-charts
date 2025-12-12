@@ -1,0 +1,61 @@
+###############################################################
+# Common
+###############################################################
+
+# Name of the application
+app: "minecraft"
+
+image_tag: "latest"
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Port to expose for the container
+port: 25565
+
+###############################################################
+# Application Configuration
+###############################################################
+
+# Minecraft version to host the server on
+minecraft_version: 1.21.10
+
+# Whether to the EULA for the Minecraft
+minecraft_eula: true
+
+# Type of the Minecraft server (e.g. PAPER, VANILLA, SPIGOT,...)
+minecraft_type: "PAPER"
+
+# Initial memory usage on the Minecraft server
+minecraft_init_memory: 2G
+
+# Maximum memory usage on the Minecraft server
+minecraft_max_memory: 4G
+
+# Maximum number of players allowed on the Minecraft server
+minecraft_max_players: 20
+
+# Whether to enable PVP on the Minecraft server
+minecraft_pvp: true
+
+# Seed for the initial map generator
+minecraft_seed: ""
+
+# Timezone for the Minecraft server
+minecraft_timezone: "Europe/Brussels"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+# Include the creation of the PersistentVolumeClaim
+include_volumes: false
+
+##### The following parameters only apply if 'include_volumes' is set to 'true' #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "500Mi"
