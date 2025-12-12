@@ -12,7 +12,7 @@ image_tag: "latest"
 ###############################################################
 
 # Port to expose for the container
-port: 25565
+port: 30001
 
 ###############################################################
 # Application Configuration
