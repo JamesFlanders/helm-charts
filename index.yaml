@@ -1,5 +1,24 @@
 apiVersion: v1
 entries:
+  minecraft:
+  - apiVersion: v1
+    appVersion: v5.0.0
+    created: "2025-12-12T17:01:42.169930453Z"
+    description: Helm chart used to deploy the Minecraft for Kubernetes
+    digest: 48d9e536a1766736c6db478a4c6ce9036a707d61d9c0b196b81326d6b84daa91
+    home: https://minecraft.net/
+    icon: https://static.wikia.nocookie.net/animatorvsanimation/images/5/52/MinecraftIcon.png/revision/latest?cb=20250423103804
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: minecraft
+    sources:
+    - https://artifacthub.io/packages/helm/minecraft-server-charts/minecraft
+    - https://artifacthub.io/packages/helm/minecraft-server-charts/minecraft
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/minecraft-0.1.0/minecraft-0.1.0.tgz
+    version: 0.1.0
   nodered:
   - apiVersion: v1
     appVersion: v4.0.9
@@ -90,4 +109,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest-tracker-0.1.0/speedtest-tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-08T20:50:51.674587641Z"
+generated: "2025-12-12T17:01:42.169946342Z"
