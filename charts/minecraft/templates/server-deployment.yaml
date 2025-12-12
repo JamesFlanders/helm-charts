@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}
-          image:
-            itzg/minecraft-server: {{.Values.image_tag}}
+          image: "itzg/minecraft-server:{{.Values.image_tag}}"
           ports:
             - containerPort: 25565
               name: tcp
