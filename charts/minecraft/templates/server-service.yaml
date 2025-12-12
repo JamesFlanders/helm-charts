@@ -5,10 +5,12 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - protocol: TCP
+  - name: tcp
+    protocol: TCP
     port: 25565
-    targetPort: {{ .Values.port }}
-  - protocol: UDP
+    targetPort: {{ .Values.port }}µ
+  - name: udp
+    protocol: UDP
     port: 25565
     targetPort: {{ .Values.port }}
   selector:
