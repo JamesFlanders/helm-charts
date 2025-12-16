@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}-backend
-        image: ghcr.io/jamesflanders/{{.Values.app}}-backend:0.1.0
+        image: ghcr.io/jamesflanders/{{.Values.app}}-backend:0.1.1
         ports:
         - containerPort: 8000
           name: http

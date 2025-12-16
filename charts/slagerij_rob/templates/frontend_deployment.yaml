@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}-frontend
-        image: ghcr.io/jamesflanders/{{.Values.app}}-frontend:0.1.0
+        image: ghcr.io/jamesflanders/{{.Values.app}}-frontend:0.1.1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
