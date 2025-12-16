@@ -76,6 +76,24 @@ entries:
   slagerij-rob:
   - apiVersion: v2
     appVersion: v0.1.0
+    created: "2025-12-16T17:02:24.472422508Z"
+    description: Helm chart used to deploy the Slagerij Rob application for Kubernetes
+    digest: 8f15e10ef4c963445554e716d79b49664be7672df2fb40263f04e9299141641b
+    home: https://github.com/JamesFlanders/
+    icon: https://i.imgur.com/sD0RTlG.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: slagerij-rob
+    sources:
+    - https://github.com/JamesFlanders/slagerij-rob-backend
+    - https://github.com/JamesFlanders/slagerij-rob-frontend
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/slagerij-rob-0.1.1/slagerij-rob-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v0.1.0
     created: "2025-12-08T20:50:51.674579806Z"
     description: Helm chart used to deploy the Slagerij Rob application for Kubernetes
     digest: 961b14ce93686e78c8d11c72bdeae8e19aad5582e45182eff2627d363cf97dab
@@ -127,4 +145,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/speedtest-tracker-0.1.0/speedtest-tracker-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-16T14:09:24.248847901Z"
+generated: "2025-12-16T17:02:24.472453334Z"
