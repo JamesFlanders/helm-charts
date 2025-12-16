@@ -45,6 +45,14 @@ minecraft_pvp: true
 # Timezone for the Minecraft server
 minecraft_timezone: "Europe/Brussels"
 
+# Whether to enable BlueMap for the Minecraft server (Required BlueMap plugin to work)
+minecraft_bluemap_enabled: false
+
+##### The following parameters only apply if 'minecraft_bluemap_enabled' is set to 'true' #####
+
+# Hostname for the BlueMap server
+minecraft_bluemap_host: "map.mc.caenen.net"
+
 ###############################################################
 # Volumes and Storage
 ###############################################################
