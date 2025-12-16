@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: 8100
   selector:
-    app: {{ .Values.app }}-bluemap
+    app: {{ .Values.app }}
 {{end}}

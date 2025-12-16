@@ -51,7 +51,7 @@ minecraft_bluemap_enabled: false
 ##### The following parameters only apply if 'minecraft_bluemap_enabled' is set to 'true' #####
 
 # Hostname for the BlueMap server
-minecraft_bluemap_host: "map.mc.caenen.net"
+minecraft_bluemap_host: "bluemap.caenen.net"
 
 ###############################################################
 # Volumes and Storage
