@@ -19,4 +19,4 @@ spec:
               service:
                 name: {{ .Values.app }}-service
                 port:
-                  number: 12470
+                  number: 11470

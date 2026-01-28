@@ -6,6 +6,6 @@ spec:
   type: ClusterIP
   ports:
   - protocol: TCP
-    port: 12470
+    port: 11470
   selector:
     app: {{ .Values.app }}

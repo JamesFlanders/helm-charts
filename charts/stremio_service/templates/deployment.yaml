@@ -16,6 +16,6 @@ spec:
         - name: {{ .Values.app }}
           image: stremio/server:v4.20.16
           ports:
-            - containerPort: 12470
-              name: https
+            - containerPort: 11470
+              name: http
               protocol: TCP
