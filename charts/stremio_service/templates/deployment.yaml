@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+        - name: {{ .Values.app }}
+          image: stremio/server:v4.20.16
+          ports:
+            - containerPort: 12470
+              name: https
+              protocol: TCP
