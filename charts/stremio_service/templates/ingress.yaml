@@ -24,6 +24,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.app }}-hlsv2-service
+                name: {{ .Values.app }}-service
                 port:
                   number: 11470
