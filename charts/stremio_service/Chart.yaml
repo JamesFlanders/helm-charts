@@ -4,10 +4,7 @@ description: Helm chart used to deploy a Stremio Service
 home: https://www.stremio.com/
 icon: https://downloadr2.apkmirror.com/wp-content/uploads/2025/03/22/67eb1c3707970_com.stremio.one.png
 
-type: application
-
-version: 0.1.3
-appVersion: v4.20.16
+version: 0.1.4
 
 sources:
     - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
