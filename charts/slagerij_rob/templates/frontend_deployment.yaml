@@ -14,11 +14,9 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}-frontend
-        image: ghcr.io/jamesflanders/{{.Values.app}}-frontend:0.1.1
+        image: ghcr.io/jamesflanders/{{.Values.app}}-frontend:{{ .Values.version_frontend }}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
           name: http
           protocol: TCP
-      imagePullSecrets:
-        - name: github-container-registry-secret

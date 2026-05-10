@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}-backend
-        image: ghcr.io/jamesflanders/{{.Values.app}}-backend:0.1.1
+        image: ghcr.io/jamesflanders/{{.Values.app}}-backend:{{ .Values.version_backend }}
         ports:
         - containerPort: 8000
           name: http
@@ -24,21 +24,19 @@ spec:
             valueFrom:
               secretKeyRef:
                 key: username
-                name: {{ .Values.app }}-database-secret
+                name: {{ .Values.secret_name }}
           - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
                 key: password
-                name: {{ .Values.app }}-database-secret
+                name: {{ .Values.secret_name }}
           - name: DB_HOSTNAME
             valueFrom:
               secretKeyRef:
                 key: hostname
-                name: {{ .Values.app }}-database-secret
+                name: {{ .Values.secret_name }}
           - name: DB_PORT
             valueFrom:
               secretKeyRef:
                 key: port
-                name: {{ .Values.app }}-database-secret
-      imagePullSecrets:
-        - name: github-container-registry-secret
+                name: {{ .Values.secret_name }}
