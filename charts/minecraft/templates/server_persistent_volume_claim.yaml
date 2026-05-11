@@ -1,9 +1,9 @@
-{{- $name := printf "%s-data-pvc" .Values.app }}
-{{- if not (lookup "v1" "PersistentVolumeClaim" .Release.Namespace $name ) }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ .Values.app }}-data-pvc
+  annotations:
+    helm.sh/resource-policy: keep
 spec:
   accessModes:
     - ReadWriteOnce
@@ -11,4 +11,3 @@ spec:
   resources:
     requests:
       storage: {{ .Values.storage_size }}
-{{ end }}
