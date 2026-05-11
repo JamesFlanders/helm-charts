@@ -6,7 +6,7 @@
 app: "wikijs"
 
 # Tag of the container image(s)
-tag_application: v2.5.314
+tag_application: 2
 tag_database: 15-alpine
 
 ###############################################################
