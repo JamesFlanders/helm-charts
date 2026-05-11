@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-application-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-application
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-application
+    spec:
+      containers:
+        - name: {{ .Values.app }}-application
+          image: "lscr.io/linuxserver/speedtest-tracker:{{.Values.tag_application}}"
+          env:
+            - name: APP_URL
+              value: "https://{{ .Values.host }}"
+            - name: APP_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: key
+                  name: {{ .Values.application_secret_name }}
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: hostname
+                  name: {{ .Values.database_secret_name }}
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: port
+                  name: {{ .Values.database_secret_name }}
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Values.database_secret_name }}
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Values.database_secret_name }}
+            - name: DB_CONNECTION
+              value: "pgsql"
+            - name: SPEEDTEST_SCHEDULE
+              value: "*/15 * * * *"
+            - name: APP_TIMEZONE
+              value: "Europe/Brussels"
+            - name: DISPLAY_TIMEZONE
+              value: "Europe/Brussels"
+            - name: CHART_DATETIME_FORMAT
+              value: "j/m/y G:i"
+            - name: DATETIME_FORMAT
+              value: "j M Y, G:i:s"
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+          volumeMounts:
+            - name: {{ .Values.app }}-config
+              mountPath: /config
+      volumes:
+        - name: {{ .Values.app }}-config
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-config-pvc

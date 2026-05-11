@@ -6,7 +6,8 @@
 app: "speedtest-tracker"
 
 # Tag of the container image(s)
-tag: "1.14.0"
+tag_application: 1.14.0
+tag_database: 15-alpine
 
 ###############################################################
 # Accessibility
@@ -14,6 +15,10 @@ tag: "1.14.0"
 
 # Name of the DNS record to link to the container.
 host: "speedtest.caenen.net"
+
+# Secret for the application and PostgreSQL Database
+application_secret_name: "speedtest-tracker-application-secret"
+database_secret_name: "speedtest-tracker-database-secret"
 
 ###############################################################
 # Volumes and Storage
@@ -25,4 +30,4 @@ host: "speedtest.caenen.net"
 storage_class_name: "nfs"
 
 # Size of the PersistentVolumeClaim.
-storage_size: "500Mi"
+storage_size: "1Gi"
