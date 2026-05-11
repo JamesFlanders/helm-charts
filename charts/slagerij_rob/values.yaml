@@ -6,9 +6,9 @@
 app: "slagerij-rob"
 
 # Versions of the images
-version_frontend: 0.1.1
-version_backend: 0.1.5
-version_database: 17.6-alpine
+tag_frontend: 0.1.1
+tag_backend: 0.1.5
+tag_database: 17.6-alpine
 
 ###############################################################
 # Accessibility

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}-database
-          image: postgres:{{ .Values.version_database }}
+          image: "postgres:{{ .Values.tag_database }}"
           ports:
             - containerPort: 5432
               name: database
