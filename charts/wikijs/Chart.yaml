@@ -4,7 +4,7 @@ description: Helm chart used to deploy a WikiJS
 home: https://js.wiki/
 icon: https://js.wiki/img/wikijs-full-2021.b840e376.svg
 
-version: 0.1.0
+version: 0.1.1
 
 maintainers:
     - name: James Flanders
