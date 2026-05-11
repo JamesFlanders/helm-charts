@@ -18,3 +18,15 @@ host: "wiki.caenen.net"
 
 # Secret for the PostgreSQL Database
 secret_name: "wikijs-database-secret"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "1Gi"
