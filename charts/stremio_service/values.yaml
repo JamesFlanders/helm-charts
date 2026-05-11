@@ -5,8 +5,8 @@
 # Name of the application
 app: "stremio-service"
 
-# Versions of the images
-version: v4.20.16
+# Tag of the container image(s)
+tag: v4.20.16
 
 ###############################################################
 # Accessibility
