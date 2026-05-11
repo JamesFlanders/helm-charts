@@ -1,8 +1,9 @@
-{{ if .Values.include_volumes }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ .Values.app }}-data-pvc
+  annotations:
+    helm.sh/resource-policy: keep
 spec:
   accessModes:
     - ReadWriteOnce
@@ -10,4 +11,3 @@ spec:
   resources:
     requests:
       storage: {{ .Values.storage_size }}
-{{ end }}

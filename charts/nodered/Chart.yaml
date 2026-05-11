@@ -4,10 +4,7 @@ description: Helm chart used to deploy the NodeRED for Kubernetes
 home: https://nodered.org/
 icon: https://nodered.org/about/resources/media/node-red-icon.svg
 
-type: application
-
-version: 0.1.0
-appVersion: v4.0.9
+version: 0.1.1
 
 sources:
     - https://judelabs.substack.com/p/deploying-node-red-on-kubernetes

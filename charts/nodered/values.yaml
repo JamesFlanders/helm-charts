@@ -5,6 +5,9 @@
 # Name of the application
 app: "nodered"
 
+# Tag of the container image(s)
+tag: "latest"
+
 ###############################################################
 # Accessibility
 ###############################################################
@@ -16,10 +19,7 @@ host: "nodered.caenen.net"
 # Volumes and Storage
 ###############################################################
 
-# Include the creation of the PersistentVolumeClaim
-include_volumes: false
-
-##### The following parameters only apply if 'include_volumes' is set to 'true' #####
+##### The following parameters only apply on the first deployment of this instance of the application. #####
 
 # Name of the 'StorageClass' to use for the PersistentVolumeClaim.
 storage_class_name: "nfs"
