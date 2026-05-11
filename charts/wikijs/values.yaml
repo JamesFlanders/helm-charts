@@ -1,0 +1,20 @@
+###############################################################
+# Common Values
+###############################################################
+
+# Name of the application
+app: "wikijs"
+
+# Tag of the container image(s)
+tag_application: v2.5.314
+tag_database: 15-alpine
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Name of the DNS record to link to the container.
+host: "wiki.caenen.net"
+
+# Secret for the PostgreSQL Database
+secret_name: "wikijs-database-secret"

@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-application-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-application
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-application
+    spec:
+      containers:
+        - name: {{ .Values.app }}-application
+          image: "ghcr.io/requarks/wiki:{{ .Values.tag_application }}"
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          env:
+            - name: DB_TYPE
+              value: postgres
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Values.secret_name }}
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Values.secret_name }}
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: hostname
+                  name: {{ .Values.secret_name }}
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: port
+                  name: {{ .Values.secret_name }}
+            - name: DB_NAME
+              value: wiki
