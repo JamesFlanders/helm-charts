@@ -8,4 +8,4 @@ spec:
   - protocol: TCP
     port: 3000
   selector:
-    app: {{ .Values.app }}
+    app: {{ .Values.app }}-application
