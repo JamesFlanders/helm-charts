@@ -4,7 +4,7 @@ description: Helm chart used to deploy the Speedtest Tracker for Kubernetes
 home: https://docs.speedtest-tracker.dev/
 icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/speedtest-tracker-logo.png
 
-version: 0.1.2
+version: 0.1.0
 
 sources:
     - https://github.com/maximemoreillon/kubernetes-manifests/tree/master/speedtest-tracker
