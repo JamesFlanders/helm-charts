@@ -14,7 +14,7 @@ spec:
       serviceAccountName: {{ .Values.app }}-sa-clusteradmin
       containers:
       - name: {{ .Values.app }}
-        image: portainer/agent:2.41.0-alpine
+        image: "portainer/agent:{{ .Values.tag }}"
         imagePullPolicy: Always
         env:
         - name: LOG_LEVEL

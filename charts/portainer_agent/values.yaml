@@ -4,3 +4,6 @@
 
 # Name of the application
 app: "portainer-agent"
+
+# Tag of the container image(s)
+tag: "2.41.0-alpine"
