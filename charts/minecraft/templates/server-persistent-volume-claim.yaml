@@ -1,4 +1,5 @@
-{{ if .Values.include_volumes }}
+{{- $name := printf "%s-data-pvc" .Values.app }}
+{{- if not (lookup "v1" "PersistentVolumeClaim" .Release.Namespace $name ) }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

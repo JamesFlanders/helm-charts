@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.app }}
+      app: {{ .Values.app }}-server
   template:
     metadata:
       labels:
-        app: {{ .Values.app }}
+        app: {{ .Values.app }}-server
     spec:
       containers:
-        - name: {{ .Values.app }}
-          image: "itzg/minecraft-server:{{.Values.image_tag}}"
+        - name: {{ .Values.app }}-server
+          image: "itzg/minecraft-server:{{.Values.tag}}"
           ports:
             - containerPort: 25565
               name: tcp
