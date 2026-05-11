@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}
-          image: lscr.io/linuxserver/speedtest-tracker:latest
+          image: "lscr.io/linuxserver/speedtest-tracker:{{.Values.tag}}"
           env:
             - name: APP_KEY
               value: "base64:h0hu0NV4f8hhxzrWgoNrtbLCcJOGMBD/1TkOe58wv6Y="
