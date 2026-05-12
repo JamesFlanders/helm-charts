@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+        - name: {{ .Values.app }}
+          image: "teamspeaksystems/teamspeak6-server:{{ .Values.tag }}"
+          ports:
+            - containerPort: 9987
+              name: voice
+              protocol: UDP
+            - containerPort: 30033
+              name: ftp
+              protocol: TCP
+          env:
+            - name: TSSERVER_LICENSE_ACCEPTED
+              value: "accept"
+          volumeMounts:
+            - name: {{ .Values.app }}-tsserver
+              mountPath: /var/tsserver/
+      volumes:
+      - name: {{ .Values.app }}-tsserver
+        persistentVolumeClaim:
+          claimName: {{ .Values.app }}-tsserver-pvc
