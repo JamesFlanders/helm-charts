@@ -1,0 +1,30 @@
+###############################################################
+# Common Values
+###############################################################
+
+# Name of the application
+app: "gramps"
+
+# Tag of the container image(s)
+tag_web: "v24.12.2"
+tag_storage: "7.2.4-alpine"
+tag_worker: "v24.12.2"
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Name of the DNS record to link to the container.
+host: "famillie.caenen.net"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "500Mi"

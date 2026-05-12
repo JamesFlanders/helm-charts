@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-storage-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-storage
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-storage
+    spec:
+      containers:
+        - name: {{ .Values.app }}-storage
+          image: "docker.io/library/redis:{{ .Values.tag_storage }}"
+          ports:
+            - containerPort: 6379
+              name: redis
+              protocol: TCP

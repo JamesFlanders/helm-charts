@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-worker-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-worker
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-worker
+    spec:
+      containers:
+        - name: {{ .Values.app }}-worker
+          image: "ghcr.io/gramps-project/grampsweb:{{ .Values.tag_worker }}"
+          command:
+            - celery
+            - -A
+            - gramps_webapi.celery
+            - worker
+            - --loglevel=INFO
+            - --concurrency=2
+          env:
+            - name: GRAMPSWEB_TREE
+              value: "Caenen"
+            - name: GRAMPSWEB_CELERY_CONFIG__broker_url
+              value: "redis://{{ .Values.app }}-storage-service:6379/0"
+            - name: GRAMPSWEB_CELERY_CONFIG__result_backend
+              value: "redis://{{ .Values.app }}-storage-service:6379/0"
+            - name: GRAMPSWEB_RATELIMIT_STORAGE_URI
+              value: "redis://{{ .Values.app }}-storage-service:6379/1"
