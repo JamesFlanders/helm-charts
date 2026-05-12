@@ -48,7 +48,7 @@ spec:
               mountPath: /app/media
               subPath: media
             - name: {{ .Values.app }}-app
-              mountPath: /app/thumbnail_cache
+              mountPath: /app/tmp
               subPath: tmp
             - name: {{ .Values.app }}-grampsdb
               mountPath: /root/.gramps/grampsdb
