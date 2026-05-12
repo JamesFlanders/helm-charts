@@ -30,7 +30,26 @@ spec:
               value: "redis://{{ .Values.app }}-storage-service:6379/1"
           volumeMounts:
             - name: {{ .Values.app }}-app
-              mountPath: /app
+              mountPath: /app/users
+              subPath: users
+            - name: {{ .Values.app }}-app
+              mountPath: /app/indexdir
+              subPath: indexdir
+            - name: {{ .Values.app }}-app
+              mountPath: /app/thumbnail_cache
+              subPath: thumbnail_cache
+            - name: {{ .Values.app }}-app
+              mountPath: /app/cache
+              subPath: cache
+            - name: {{ .Values.app }}-app
+              mountPath: /app/secret
+              subPath: secret
+            - name: {{ .Values.app }}-app
+              mountPath: /app/media
+              subPath: media
+            - name: {{ .Values.app }}-app
+              mountPath: /app/thumbnail_cache
+              subPath: tmp
             - name: {{ .Values.app }}-grampsdb
               mountPath: /root/.gramps/grampsdb
       volumes:
