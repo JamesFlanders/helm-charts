@@ -17,6 +17,9 @@ tag_worker: "v24.12.2"
 # Name of the DNS record to link to the container.
 host: "famillie.caenen.net"
 
+# Secret for the application and PostgreSQL Database
+secret_name: "gramps-web-and-worker-secret"
+
 ###############################################################
 # Volumes and Storage
 ###############################################################

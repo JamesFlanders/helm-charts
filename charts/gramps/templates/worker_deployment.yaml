@@ -31,6 +31,11 @@ spec:
               value: "redis://{{ .Values.app }}-storage-service:6379/0"
             - name: GRAMPSWEB_RATELIMIT_STORAGE_URI
               value: "redis://{{ .Values.app }}-storage-service:6379/1"
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: key
+                  name: {{ .Values.secret_name }}
           volumeMounts:
             - name: {{ .Values.app }}-app
               mountPath: /app/users
