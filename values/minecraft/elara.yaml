@@ -1,2 +1,3 @@
 ip: "192.168.48.15"
 port: "25567"
+minecraft_version: "1.21.11"
