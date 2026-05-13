@@ -35,4 +35,4 @@ secret_name: "arma3-server-steamcmd-secret"
 storage_class_name: "nfs"
 
 # Size of the PersistentVolumeClaim.
-storage_size: "10Gi"
+storage_size: "5Gi"
