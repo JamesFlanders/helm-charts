@@ -53,9 +53,6 @@ spec:
               mountPath: /arma3/server/mods
               subPath: mods
             - name: {{ .Values.app }}-server
-              mountPath: /arma3/server/configs
-              subPath: configs
-            - name: {{ .Values.app }}-server
               mountPath: /arma3/server/servermods
               subPath: servermods
       volumes:
