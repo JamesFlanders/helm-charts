@@ -24,10 +24,10 @@ spec:
     - name: von
       protocol: UDP
       port: {{ .Values.von_port }}
-      targetPort: 2304
+      targetPort: 2305
     - name: battleye
       protocol: UDP
       port: {{ .Values.battleye_port }}
-      targetPort: 2304
+      targetPort: 2306
   selector:
     app: {{ .Values.app }}
