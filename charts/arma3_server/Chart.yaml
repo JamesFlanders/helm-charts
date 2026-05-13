@@ -4,7 +4,7 @@ description: Helm chart used to deploy an Arma 3 server
 home: https://arma3.com/
 icon: https://pngimg.com/uploads/arma/arma_PNG54.png
 
-version: 0.1.1
+version: 0.1.2
 
 sources:
     - https://github.com/BrettMayson/Arma3Server
