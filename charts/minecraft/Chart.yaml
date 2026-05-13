@@ -4,7 +4,7 @@ description: Helm chart used to deploy the Minecraft for Kubernetes
 home: https://minecraft.net/
 icon: https://cdn2.steamgriddb.com/icon_thumb/0a17ad0fa0870b05f172deeb05efef8e.png
 
-version: 0.1.5
+version: 0.1.6
 
 sources:
     - https://artifacthub.io/packages/helm/minecraft-server-charts/minecraft
