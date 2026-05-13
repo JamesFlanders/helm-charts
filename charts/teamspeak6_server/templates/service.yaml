@@ -11,11 +11,11 @@ spec:
   ports:
     - name: voice
       protocol: UDP
-      port: 9987
-      targetPort: {{ .Values.voice_port }}
+      port: {{ .Values.voice_port }}
+      targetPort: 9987
     - name: ftp
       protocol: UDP
-      port: 30033
-      targetPort: {{ .Values.ftp_port }}
+      port: {{ .Values.ftp_port }}
+      targetPort: 30033
   selector:
     app: {{ .Values.app }}
