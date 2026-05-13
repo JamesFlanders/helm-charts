@@ -42,6 +42,8 @@ spec:
                 secretKeyRef:
                   key: password
                   name: {{ .Values.secret_name }}
+            - name: STEAM_BRANCH
+              value: public
           volumeMounts:
             - name: {{ .Values.app }}-server
               mountPath: /arma3/server/mpmissions
