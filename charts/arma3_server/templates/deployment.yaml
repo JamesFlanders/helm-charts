@@ -20,10 +20,10 @@ spec:
               name: game
               protocol: UDP
             - containerPort: 2303
-              name: steam_query
+              name: steam-query
               protocol: UDP
             - containerPort: 2304
-              name: steam_master
+              name: steam-master
               protocol: UDP
             - containerPort: 2305
               name: von

@@ -13,11 +13,11 @@ spec:
       protocol: UDP
       port: {{ .Values.game_port }}
       targetPort: 2302
-    - name: steam_query
+    - name: steam-query
       protocol: UDP
       port: {{ .Values.steam_query_port }}
       targetPort: 2303
-    - name: steam_master
+    - name: steam-master
       protocol: UDP
       port: {{ .Values.steam_master_port }}
       targetPort: 2304
