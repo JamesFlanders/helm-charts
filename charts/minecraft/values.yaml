@@ -12,6 +12,9 @@ tag: "latest"
 # Accessibility
 ###############################################################
 
+# IP address to use for the LoadBalancer
+ip: "192.168.48.11"
+
 # Port to expose for the container
 port: 30001
 
