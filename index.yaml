@@ -2,6 +2,21 @@ apiVersion: v1
 entries:
   arma3-server:
   - apiVersion: v1
+    created: "2026-05-13T23:12:56.275182615Z"
+    description: Helm chart used to deploy an Arma 3 server
+    digest: a95f2e7580254881712945c1f7df4dcbfaed4e1190dd17294641591633748e26
+    home: https://arma3.com/
+    icon: https://pngimg.com/uploads/arma/arma_PNG54.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: arma3-server
+    sources:
+    - https://github.com/BrettMayson/Arma3Server
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/arma3-server-0.1.2/arma3-server-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
     created: "2026-05-13T23:02:04.005104923Z"
     description: Helm chart used to deploy an Arma 3 server
     digest: c537ed804d4bbe8dc35057994e680e4311461d41e34a238ffe9441ce9fec1e50
@@ -31,4 +46,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/arma3-server-0.1.0/arma3-server-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-13T23:02:04.005113439Z"
+generated: "2026-05-13T23:12:56.27519348Z"
