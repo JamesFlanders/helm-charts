@@ -13,7 +13,7 @@ tag: "2.41.0-alpine"
 ###############################################################
 
 # IP address to use for the LoadBalancer
-ip: "192.168.48.11"
+# ip: "192.168.48.x"
 
 # Port(s) to expose for the container
 port: 9001

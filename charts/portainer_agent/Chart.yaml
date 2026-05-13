@@ -4,7 +4,7 @@ description: Helm chart used to deploy the Portainer Agent for Kubernetes
 home: https://www.portainer.io/
 icon: https://cdn.worldvectorlogo.com/logos/portainer.svg
 
-version: 0.1.1
+version: 0.1.2
 
 sources:
     - https://downloads.portainer.io/ee2-32/portainer-agent-k8s-lb.yaml

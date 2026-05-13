@@ -2,8 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.app }}-service
+  {{- if .Values.ip }}
   annotations:
     metallb.io/loadBalancerIPs: {{ .Values.ip }}
+  {{- end }}
 spec:
   type: LoadBalancer
   ports:

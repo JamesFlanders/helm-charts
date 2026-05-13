@@ -4,7 +4,7 @@ description: Helm chart used to deploy a Teamspeak 6 Server
 home: https://teamspeak.com/en/
 icon: https://teamspeak.com/user/themes/teamspeak/images/logo_inverse.svg
 
-version: 0.1.1
+version: 0.1.2
 
 maintainers:
     - name: James Flanders
