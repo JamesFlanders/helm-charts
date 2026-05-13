@@ -11,11 +11,11 @@ spec:
   ports:
     - name: tcp
       protocol: TCP
-      port: 25565
-      targetPort: {{ .Values.port }}
+      port: {{ .Values.port }}
+      targetPort: 25565
     - name: udp
       protocol: UDP
-      port: 25565
-      targetPort: {{ .Values.port }}
+      port: {{ .Values.port }}
+      targetPort: 25565
   selector:
     app: {{ .Values.app }}-server
