@@ -9,3 +9,4 @@ minecraft_seed: "-1751897469576739354"
 minecraft_pvp: true
 storage_class_name: "nfs"
 storage_size: "2Gi"
+minecraft_bluemap_enabled: true
