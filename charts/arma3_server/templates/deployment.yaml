@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+        - name: {{ .Values.app }}
+          image: "ghcr.io/brettmayson/arma3server/arma3server:{{ .Values.tag }}"
+          ports:
+            - containerPort: 2302
+              name: game
+              protocol: UDP
+            - containerPort: 2303
+              name: steam_query
+              protocol: UDP
+            - containerPort: 2304
+              name: steam_master
+              protocol: UDP
+            - containerPort: 2305
+              name: von
+              protocol: UDP
+            - containerPort: 2306
+              name: battleye
+              protocol: UDP
+          env:
+            - name: STEAM_USER
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Values.secret_name }}
+            - name: STEAM_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Values.secret_name }}

@@ -1,0 +1,38 @@
+###############################################################
+# Common Values
+###############################################################
+
+# Name of the application
+app: "arma3-server"
+
+# Tag of the container image(s)
+tag: "v2"
+
+###############################################################
+# Accessibility
+###############################################################
+
+# IP address to use for the LoadBalancer
+# ip: "192.168.48.x"
+
+# Port(s) to expose for the container
+game_port: 2302
+steam_query_port: 2303
+steam_master_port: 2304
+von_port: 2305
+battleye_port: 2306
+
+# Secret for the Steam CMD
+secret_name: "arma3-server-steamcmd-secret"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "10Gi"

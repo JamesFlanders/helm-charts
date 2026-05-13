@@ -1,0 +1,14 @@
+apiVersion: v1
+name: arma3-server
+description: Helm chart used to deploy an Arma 3 server
+home: https://arma3.com/
+icon: https://pngimg.com/uploads/arma/arma_PNG54.png
+
+version: 0.1.0
+
+sources:
+    - https://github.com/BrettMayson/Arma3Server
+
+maintainers:
+    - name: James Flanders
+      email: jens.caenen@telenet.be
