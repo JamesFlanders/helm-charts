@@ -42,3 +42,23 @@ spec:
                 secretKeyRef:
                   key: password
                   name: {{ .Values.secret_name }}
+          volumeMounts:
+            - name: {{ .Values.app }}-server
+              mountPath: /arma3/server/mpmissions
+              subPath: mpmissions
+            - name: {{ .Values.app }}-server
+              mountPath: /arma3/server/configs
+              subPath: configs
+            - name: {{ .Values.app }}-server
+              mountPath: /arma3/server/mods
+              subPath: mods
+            - name: {{ .Values.app }}-server
+              mountPath: /arma3/server/configs
+              subPath: configs
+            - name: {{ .Values.app }}-server
+              mountPath: /arma3/server/servermods
+              subPath: servermods
+      volumes:
+        - name: {{ .Values.app }}-server
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-server-pvc
