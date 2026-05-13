@@ -16,7 +16,7 @@ tag: "latest"
 ip: "192.168.48.11"
 
 # Port to expose for the container
-port: 30001
+port: 25565
 
 ###############################################################
 # Application Configuration
