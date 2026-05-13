@@ -12,9 +12,12 @@ tag: "6.0.0-beta9"
 # Accessibility
 ###############################################################
 
+# IP address to use for the LoadBalancer
+ip: "192.168.48.13"
+
 # Port(s) to expose for the container
-voice_port: 31000
-ftp_port: 31001
+voice_port: 9987
+ftp_port: 30033
 
 ###############################################################
 # Volumes and Storage

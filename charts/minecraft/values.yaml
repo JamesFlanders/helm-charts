@@ -13,9 +13,9 @@ tag: "latest"
 ###############################################################
 
 # IP address to use for the LoadBalancer
-ip: "192.168.48.11"
+ip: "192.168.48.12"
 
-# Port to expose for the container
+# Port(s) to expose for the container
 port: 25565
 
 ###############################################################
