@@ -36,8 +36,21 @@ spec:
                 key: password
                 name: {{ .Values.secret_name }}
         volumeMounts:
-          - name: {{ .Values.app }}-sonarqube
-            mountPath: /opt/sonarqube
+          - name: {{ .Values.app }}-conf
+            mountPath: /opt/sonarqube/conf
+            subPath: conf
+          - name: {{ .Values.app }}-data
+            mountPath: /opt/sonarqube/data
+            subPath: data
+          - name: {{ .Values.app }}-extensions
+            mountPath: /opt/sonarqube/extensions
+            subPath: extensions
+          - name: {{ .Values.app }}-logs
+            mountPath: /opt/sonarqube/logs
+            subPath: logs
+          - name: {{ .Values.app }}-temp
+            mountPath: /opt/sonarqube/temp
+            subPath: temp
       volumes:
       - name: {{ .Values.app }}-sonarqube
         persistentVolumeClaim:
