@@ -63,6 +63,22 @@ entries:
     version: 0.1.0
   sonarqube:
   - apiVersion: v2
+    created: "2026-05-14T20:18:24.475243001Z"
+    description: Helm chart used to deploy the NodeRED for Kubernetes
+    digest: f07e34640816c7b6535309a98d5d3041bddea6f75a67a80a8c30cefc7c8ce162
+    home: https://www.sonarsource.com/products/sonarqube/
+    icon: https://assets-eu-01.kc-usercontent.com/ef593040-b591-0198-9506-ed88b30bc023/8e59bcad-6e39-41dc-abd9-a0e251e8d63f/Sonar%20%282%29.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: sonarqube
+    sources:
+    - https://medium.com/@denis.verkhovsky/sonarqube-with-docker-compose-complete-tutorial-2aaa8d0771d4
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.2/sonarqube-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2026-05-14T20:16:00.238773145Z"
     description: Helm chart used to deploy the NodeRED for Kubernetes
     digest: f8d4950c5ff8c69a08160cacd45e3c4138c6dd5b082e4b62574d15ec2e9a7343
@@ -94,4 +110,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-14T20:16:00.238785538Z"
+generated: "2026-05-14T20:18:24.475260527Z"
