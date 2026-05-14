@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Values.app }}-database-stateful-set
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-database
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-database
+    spec:
+      containers:
+        - name: {{ .Values.app }}-database
+          image: "postgres:{{ .Values.tag_database }}"
+          ports:
+            - containerPort: 5432
+              name: database
+              protocol: TCP
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: {{ .Values.secret_name }}
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Values.secret_name }}
+            - name: POSTGRES_DB
+              value: sonar
+          volumeMounts:
+            - name: {{ .Values.app }}-postgresql-pvc
+              mountPath: /var/lib/postgresql
+  volumeClaimTemplates:
+  - metadata:
+      name: {{ .Values.app }}-postgresql-pvc
+    spec:
+      accessModes:
+        - "ReadWriteOnce"
+      storageClassName: {{ .Values.storage_class_name }}
+      resources:
+        requests:
+          storage: {{ .Values.storage_size }}

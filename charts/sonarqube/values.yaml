@@ -1,0 +1,32 @@
+###############################################################
+# Common
+###############################################################
+
+# Name of the application
+app: "sonarqube"
+
+# Versions of the images
+tag_application: lts-community
+tag_database: 17.6-alpine
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Name of the DNS record to link to the container.
+host: "sonarqube.caenen.net"
+
+# Secret for the PostgreSQL Database
+secret_name: "sonarqube-database-secret"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "500Mi"

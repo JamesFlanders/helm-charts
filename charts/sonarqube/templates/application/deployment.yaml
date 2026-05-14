@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-application-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}-application
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}-application
+    spec:
+      containers:
+      - name: {{ .Values.app }}-backend
+        image: "sonarqube:{{ .Values.tag_application }}"
+        ports:
+        - containerPort: 9000
+          name: http
+          protocol: TCP
+        env:
+          - name: SONAR_JDBC_URL
+            valueFrom:
+              secretKeyRef:
+                key: jdbc_url
+                name: {{ .Values.secret_name }}
+          - name: SONAR_JDBC_USERNAME
+            valueFrom:
+              secretKeyRef:
+                key: username
+                name: {{ .Values.secret_name }}
+          - name: SONAR_JDBC_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: {{ .Values.secret_name }}
+        volumeMounts:
+          - name: {{ .Values.app }}-sonarqube-pvc
+            mountPath: /opt/sonarqube

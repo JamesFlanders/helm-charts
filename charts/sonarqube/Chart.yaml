@@ -1,0 +1,16 @@
+apiVersion: v2
+name: sonarqube
+description: Helm chart used to deploy the NodeRED for Kubernetes
+home: https://www.sonarsource.com/products/sonarqube/
+icon: https://assets-eu-01.kc-usercontent.com/ef593040-b591-0198-9506-ed88b30bc023/8e59bcad-6e39-41dc-abd9-a0e251e8d63f/Sonar%20%282%29.svg
+
+type: application
+
+version: 0.1.0
+
+sources:
+  - https://medium.com/@denis.verkhovsky/sonarqube-with-docker-compose-complete-tutorial-2aaa8d0771d4
+
+maintainers:
+  - name: James Flanders
+    email: jens.caenen@telenet.be
