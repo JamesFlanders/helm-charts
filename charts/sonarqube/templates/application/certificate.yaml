@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.app }}-certificate
+spec:
+  secretName: {{ .Values.app }}-caenen-net-tls
+  issuerRef:
+    name: cert-manager-cluster-issuer
+    kind: ClusterIssuer
+  commonName: caenen.net
+  dnsNames:
+  - caenen.net
+  - "{{ .Values.host }}"
