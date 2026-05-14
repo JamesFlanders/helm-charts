@@ -6,7 +6,7 @@
 app: "sonarqube"
 
 # Versions of the images
-tag_application: lts-community
+tag_application: community
 tag_database: 17.6-alpine
 
 ###############################################################
