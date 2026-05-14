@@ -46,17 +46,7 @@ spec:
               value: public
           volumeMounts:
             - name: {{ .Values.app }}-server
-              mountPath: /arma3/server/mpmissions
-              subPath: mpmissions
-            - name: {{ .Values.app }}-server
-              mountPath: /arma3/server/configs
-              subPath: configs
-            - name: {{ .Values.app }}-server
-              mountPath: /arma3/server/mods
-              subPath: mods
-            - name: {{ .Values.app }}-server
-              mountPath: /arma3/server/servermods
-              subPath: servermods
+              mountPath: /arma3/server
       volumes:
         - name: {{ .Values.app }}-server
           persistentVolumeClaim:
