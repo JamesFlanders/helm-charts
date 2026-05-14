@@ -6,7 +6,7 @@ icon: https://assets-eu-01.kc-usercontent.com/ef593040-b591-0198-9506-ed88b30bc0
 
 type: application
 
-version: 0.1.4
+version: 0.1.5
 
 sources:
   - https://medium.com/@denis.verkhovsky/sonarqube-with-docker-compose-complete-tutorial-2aaa8d0771d4
