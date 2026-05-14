@@ -41,4 +41,4 @@ spec:
       volumes:
       - name: {{ .Values.app }}-sonarqube
         persistentVolumeClaim:
-          claimName: {{ .Values.app }}-data-pvc
+          claimName: {{ .Values.app }}-sonarqube-pvc
