@@ -1,0 +1,33 @@
+###############################################################
+# Common
+###############################################################
+
+# Name of the application
+app: "php-dynamic-qr-code"
+
+# Tag of the container image(s)
+tag_application: "latest"
+tag_database: "latest"
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Name of the DNS record to link to the container.
+host: "qr.caenen.net"
+
+# Secret for the PostgreSQL Database
+secret_name: "php-dynamic-qr-code-database-secret"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim(s).
+storage_size_application: "100Mi"
+storage_size_database: "250Mi"
