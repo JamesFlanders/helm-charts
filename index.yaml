@@ -63,6 +63,19 @@ entries:
     version: 0.1.0
   php-dynamic-qr-code:
   - apiVersion: v1
+    created: "2026-05-18T18:56:58.410667662Z"
+    description: Helm chart used to deploy the PHP-Dynamic QR Code for Kubernetes
+    digest: abfca8d44bc17258ceb68082762689f78567b23a0ad0a96312686b05b8199467
+    home: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
+    icon: https://avatars.githubusercontent.com/u/70962472?s=48&v=4
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: php-dynamic-qr-code
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/php-dynamic-qr-code-0.1.1/php-dynamic-qr-code-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     created: "2026-05-18T18:45:16.738250443Z"
     description: Helm chart used to deploy the PHP-Dynamic QR Code for Kubernetes
     digest: dd61ffb91eb2ade60d208d2df6db959557eab20fdba8e794e458de08b10c43db
@@ -204,4 +217,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-18T18:45:16.738310417Z"
+generated: "2026-05-18T18:56:58.410695694Z"
