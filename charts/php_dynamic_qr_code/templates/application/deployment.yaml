@@ -25,9 +25,15 @@ spec:
             - name: "QRCODE_GENERATOR"
               value: "internal.qrcode"
             - name: "DATABASE_HOST"
-              value: "{{ .Values.app }}-database-service"
+              valueFrom:
+                secretKeyRef:
+                  key: hostname
+                  name: {{ .Values.secret_name }}
             - name: "DATABASE_PORT"
-              value: "3306"
+              valueFrom:
+                secretKeyRef:
+                  key: port
+                  name: {{ .Values.secret_name }}
             - name: "DATABASE_USER"
               valueFrom:
                 secretKeyRef:

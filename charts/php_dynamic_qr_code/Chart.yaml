@@ -4,7 +4,7 @@ description: Helm chart used to deploy the PHP-Dynamic QR Code for Kubernetes
 home: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
 icon: https://avatars.githubusercontent.com/u/70962472?s=48&v=4
 
-version: 0.1.0
+version: 0.1.1
 
 maintainers:
     - name: James Flanders
