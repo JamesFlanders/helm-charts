@@ -20,7 +20,7 @@ spec:
               name: database
               protocol: TCP
           env:
-            - name:
+            - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: root_password
