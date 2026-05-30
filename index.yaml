@@ -61,6 +61,21 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/arma3-server-0.1.0/arma3-server-0.1.0.tgz
     version: 0.1.0
+  home-assistant:
+  - apiVersion: v2
+    created: "2026-05-30T09:00:54.616995462Z"
+    description: Helm chart used to deploy the Home Assistant application for Kubernetes
+    digest: 7210e09c5d56180e60b5eadbe1e555edaeb09ea1566797230bf5ec316a81ee19
+    home: https://www.home-assistant.io/
+    icon: https://design.home-assistant.io/images/brand/logo.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/home-assistant-0.1.0/home-assistant-0.1.0.tgz
+    version: 0.1.0
   php-dynamic-qr-code:
   - apiVersion: v1
     created: "2026-05-18T18:59:41.200201837Z"
@@ -230,4 +245,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-18T18:59:41.200236458Z"
+generated: "2026-05-30T09:00:54.617035617Z"
