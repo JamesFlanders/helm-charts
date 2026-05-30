@@ -10,7 +10,7 @@ spec:
         - ha.caenen.net
       secretName: {{ .Values.app }}-caenen-net-tls
   rules:
-    - host: home-assistant.caenen.net
+    - host: ha.caenen.net
       http:
         paths:
           - path: /
