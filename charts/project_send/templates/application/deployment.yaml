@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}-application-pod
-          image: "lscr.io/linuxserver/projectsend:{{.Values.tag}}"
+          image: "lscr.io/linuxserver/projectsend:{{.Values.tag_application}}"
           ports:
             - containerPort: 80
               name: tcp
