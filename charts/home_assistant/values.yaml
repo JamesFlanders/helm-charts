@@ -6,7 +6,7 @@
 app: "home-assistant"
 
 # Versions of the images
-tag: 2026.6.0b0
+tag: stable
 
 ###############################################################
 # Accessibility

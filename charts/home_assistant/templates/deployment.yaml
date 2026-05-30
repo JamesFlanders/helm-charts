@@ -14,8 +14,15 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}
-        image: "homeassistant/home-assistant:{{ .Values.tag }}"
+        image: "ghcr.io/home-assistant/home-assistant:{{ .Values.tag }}"
         ports:
         - containerPort: 8123
           name: http
           protocol: TCP
+        volumeMounts:
+          - name: {{ .Values.app }}-config
+            mountPath: /config
+      volumes:
+        - name: {{ .Values.app }}-config
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-config-pvc
