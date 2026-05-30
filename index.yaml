@@ -158,6 +158,20 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/php-dynamic-qr-code-0.1.0/php-dynamic-qr-code-0.1.0.tgz
     version: 0.1.0
+  project-send:
+  - apiVersion: v1
+    created: "2026-05-30T20:40:20.314452363Z"
+    description: Helm chart used to deploy the ProjectSend for Kubernetes
+    digest: 29f2cb9ae931a64da6c430c96925ecff04c7f8b7a9fe96c12e3d6b1ccc96fba6
+    home: https://www.projectsend.org/
+    icon: https://app.yunohost.org/default/v3/logos/2822b99c428b4b18736eeab6f8bf5da702ea81f2e2a56662c322bafb707c91a4.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: project-send
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/project-send-0.1.0/project-send-0.1.0.tgz
+    version: 0.1.0
   sonarqube:
   - apiVersion: v2
     created: "2026-05-14T20:39:32.759372416Z"
@@ -287,4 +301,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-30T09:15:57.328061794Z"
+generated: "2026-05-30T20:40:20.314520651Z"
