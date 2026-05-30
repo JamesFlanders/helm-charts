@@ -1,0 +1,28 @@
+###############################################################
+# Common
+###############################################################
+
+# Name of the application
+app: "project-send"
+
+# Versions of the images
+tag: latest
+
+###############################################################
+# Accessibility
+###############################################################
+
+# Name of the DNS record to link to the container.
+host: "filetransfer.caenen.net"
+
+###############################################################
+# Volumes and Storage
+###############################################################
+
+##### The following parameters only apply on the first deployment of this instance of the application. #####
+
+# Name of the 'StorageClass' to use for the PersistentVolumeClaim.
+storage_class_name: "nfs"
+
+# Size of the PersistentVolumeClaim.
+storage_size: "10Gi"

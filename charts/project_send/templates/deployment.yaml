@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+        - name: {{ .Values.app }}
+          image: "lscr.io/linuxserver/projectsend:{{.Values.tag}}"
+          ports:
+            - containerPort: 80
+              name: tcp
+              protocol: TCP
+          env:
+            - name: TZ
+              value: "Europe/Brussels"
+          volumeMounts:
+            - name: {{ .Values.app }}-app
+              mountPath: /data
+              subPath: data
+            - name: {{ .Values.app }}-app
+              mountPath: /config
+              subPath: config
+      volumes:
+        - name: {{ .Values.app }}-app
+          persistentVolumeClaim:
+            claimName: {{ .Values.app }}-app-pvc

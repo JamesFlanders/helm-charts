@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.app }}-ingress
+  annotations:
+    app.kubernetes.io/ingress.class: "traefik"
+spec:
+  tls:
+    - hosts:
+        - filetransfer.caenen.net
+      secretName: {{ .Values.app }}-caenen-net-tls
+  rules:
+    - host: filetransfer.caenen.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.app }}-service
+                port:
+                  number: 80
