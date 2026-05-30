@@ -63,6 +63,20 @@ entries:
     version: 0.1.0
   home-assistant:
   - apiVersion: v2
+    created: "2026-05-30T09:13:39.895973853Z"
+    description: Helm chart used to deploy the Home Assistant application for Kubernetes
+    digest: bad31e63108ba0f6af4131d3af4cc7d8b6e7a40217f0edc9106b530b354df2c0
+    home: https://www.home-assistant.io/
+    icon: https://design.home-assistant.io/images/brand/logo.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/home-assistant-0.1.2/home-assistant-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2026-05-30T09:08:25.110456218Z"
     description: Helm chart used to deploy the Home Assistant application for Kubernetes
     digest: 0293d519425988a5222dbc9984a3bd8eb9bec310bb13b747f3fabf8fdf8f0d33
@@ -259,4 +273,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-30T09:08:25.110486493Z"
+generated: "2026-05-30T09:13:39.896018837Z"
