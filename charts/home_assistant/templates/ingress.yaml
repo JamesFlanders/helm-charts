@@ -1,22 +1,22 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Values.app }}-application-ingress
+  name: {{ .Values.app }}-ingress
   annotations:
     app.kubernetes.io/ingress.class: "traefik"
 spec:
   tls:
     - hosts:
-        - {{ .Values.host }}
+        - ha.caenen.net
       secretName: {{ .Values.app }}-caenen-net-tls
   rules:
-    - host: {{ .Values.host }}
+    - host: home-assistant.caenen.net
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.app }}-application-service
+                name: {{ .Values.app }}-service
                 port:
-                  number: 80
+                  number: 8123

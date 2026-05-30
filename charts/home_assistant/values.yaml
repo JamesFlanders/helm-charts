@@ -3,21 +3,17 @@
 ###############################################################
 
 # Name of the application
-app: "php-dynamic-qr-code"
+app: "home-assistant"
 
-# Tag of the container image(s)
-tag_application: "latest"
-tag_database: "latest"
+# Versions of the images
+tag: 2026.6.0b0
 
 ###############################################################
 # Accessibility
 ###############################################################
 
 # Name of the DNS record to link to the container.
-host: "qr.caenen.net"
-
-# Secret for the PostgreSQL Database
-secret_name: "php-dynamic-qr-code-database-secret"
+host: "ha.caenen.net"
 
 ###############################################################
 # Volumes and Storage
@@ -28,6 +24,5 @@ secret_name: "php-dynamic-qr-code-database-secret"
 # Name of the 'StorageClass' to use for the PersistentVolumeClaim.
 storage_class_name: "nfs"
 
-# Size of the PersistentVolumeClaim(s).
-storage_size_application: "100Mi"
-storage_size_database: "250Mi"
+# Size of the PersistentVolumeClaim.
+storage_size: "500Mi"
