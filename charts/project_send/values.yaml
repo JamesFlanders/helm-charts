@@ -6,7 +6,8 @@
 app: "project-send"
 
 # Versions of the images
-tag: latest
+tag_application: latest
+tag_database: 9.7
 
 ###############################################################
 # Accessibility
@@ -14,6 +15,9 @@ tag: latest
 
 # Name of the DNS record to link to the container.
 host: "filetransfer.caenen.net"
+
+# Secret for the MySQL Database
+secret_name: "project-send-database-secret"
 
 ###############################################################
 # Volumes and Storage
@@ -25,4 +29,5 @@ host: "filetransfer.caenen.net"
 storage_class_name: "nfs"
 
 # Size of the PersistentVolumeClaim.
-storage_size: "10Gi"
+storage_size_application: "500Mi"
+storage_size_database: "10Gi"

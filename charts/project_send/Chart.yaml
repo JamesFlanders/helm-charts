@@ -4,7 +4,7 @@ description: Helm chart used to deploy the ProjectSend for Kubernetes
 home: https://www.projectsend.org/
 icon: https://app.yunohost.org/default/v3/logos/2822b99c428b4b18736eeab6f8bf5da702ea81f2e2a56662c322bafb707c91a4.png
 
-version: 0.1.0
+version: 0.1.1
 
 maintainers:
     - name: James Flanders
