@@ -23,16 +23,6 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  key: root_password
-                  name: {{ .Values.secret_name }}
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  key: username
-                  name: {{ .Values.secret_name }}
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
                   key: password
                   name: {{ .Values.secret_name }}
             - name: MYSQL_DATABASE
