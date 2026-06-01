@@ -340,4 +340,18 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.0/sonarqube-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-30T21:13:47.90859017Z"
+  teamspeak6-server:
+  - apiVersion: v1
+    created: "2026-06-01T16:50:11.675966245Z"
+    description: Helm chart used to deploy a Teamspeak 6 Server
+    digest: 301708f2c3074d1abcb483e3756fa5db036b6dfa9a1127eba381d220dc6c4018
+    home: https://teamspeak.com/en/
+    icon: https://teamspeak.com/user/themes/teamspeak/images/logo_inverse.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: teamspeak6-server
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
+    version: 0.1.4
+generated: "2026-06-01T16:50:11.676007041Z"
