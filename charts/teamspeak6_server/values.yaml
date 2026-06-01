@@ -6,7 +6,7 @@
 app: "teamspeak6-server"
 
 # Tag of the container image(s)
-tag: "6.0.0-beta9"
+tag: "6.0.0-beta10"
 
 ###############################################################
 # Accessibility
