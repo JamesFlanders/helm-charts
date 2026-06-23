@@ -45,7 +45,7 @@ spec:
             - name: STEAM_BRANCH
               value: public
             - name: MODS_PRESET
-              value: "mods.html"
+              value: "./mods.html"
           volumeMounts:
             - name: {{ .Values.app }}-server
               mountPath: /arma3/server
