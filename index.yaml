@@ -2,6 +2,21 @@ apiVersion: v1
 entries:
   arma3-server:
   - apiVersion: v1
+    created: "2026-06-23T16:09:33.897985986Z"
+    description: Helm chart used to deploy an Arma 3 server
+    digest: e11e9e08157087e849d7d88829015470bda6b9b58d92da41f8ac7b5aacdc9f87
+    home: https://arma3.com/
+    icon: https://pngimg.com/uploads/arma/arma_PNG54.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: arma3-server
+    sources:
+    - https://github.com/BrettMayson/Arma3Server
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/arma3-server-0.1.5/arma3-server-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v1
     created: "2026-06-22T21:42:00.657408364Z"
     description: Helm chart used to deploy an Arma 3 server
     digest: 705f4ac6a9995a5462a08b815a0cd38036a4109b3bbcced145e4dd33f9207de5
@@ -369,4 +384,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
     version: 0.1.4
-generated: "2026-06-22T21:42:00.657456166Z"
+generated: "2026-06-23T16:09:33.898018207Z"
