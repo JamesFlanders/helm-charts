@@ -6,7 +6,7 @@
 app: "arma3-server"
 
 # Tag of the container image(s)
-tag: "v2"
+tag: "v3"
 
 ###############################################################
 # Accessibility
