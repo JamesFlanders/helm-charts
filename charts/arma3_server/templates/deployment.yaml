@@ -32,16 +32,6 @@ spec:
               name: battleye
               protocol: UDP
           env:
-            - name: STEAM_USER
-              valueFrom:
-                secretKeyRef:
-                  key: username
-                  name: {{ .Values.secret_name }}
-            - name: STEAM_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: password
-                  name: {{ .Values.secret_name }}
             - name: STEAM_BRANCH
               value: public
             - name: MODS_PRESET
