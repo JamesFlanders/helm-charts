@@ -46,8 +46,6 @@ spec:
               value: public
             - name: MODS_PRESET
               value: "mods.html"
-            - name: SKIP_INSTALL
-              value: "true"
           volumeMounts:
             - name: {{ .Values.app }}-server
               mountPath: /arma3/server
