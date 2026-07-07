@@ -45,8 +45,6 @@ spec:
                   name: {{ .Values.secret_name }}
             - name: STEAM_BRANCH
               value: public
-            - name: MODS_PRESET
-              value: "server/mods.html"
             - name: SKIP_INSTALL
               value: "true"
           volumeMounts:
