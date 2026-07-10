@@ -1,18 +1,17 @@
 # Artifact Hub: https://artifacthub.io/packages/helm/goauthentik/authentik
 
 global:
-  namespaceOveride: "erinome"
+  namespaceOverride: erinome
 
 authentik:
   postgresql:
-    host: postgres.domain.tld
     user: file:///authentik-database-secret/username
     password: file:///authentik-database-secret/password
 
 server:
   ingress:
     annotations:
-      app.kubernetes.io/ingress.class: "traefik"
+      app.kubernetes.io/ingress.class: traefik
     enabled: true
     hosts:
       - idp.caenen.net
@@ -20,6 +19,12 @@ server:
       - hosts:
           - idp.caenen.net
         secretName: idp-caenen-net-tls
+  env:
+    - name: AUTHENTIK_SECRET_KEY
+      valueFrom:
+        secretKeyRef:
+          name: authentik-server-secret
+          key: key
   volumes:
     - name: authentik-database-secret
       secret:
@@ -30,6 +35,12 @@ server:
       readOnly: true
 
 worker:
+  env:
+    - name: AUTHENTIK_SECRET_KEY
+      valueFrom:
+        secretKeyRef:
+          name: authentik-server-secret
+          key: key
   volumes:
     - name: authentik-database-secret
       secret:
@@ -38,3 +49,13 @@ worker:
     - name: authentik-database-secret
       mountPath: /authentik-database-secret
       readOnly: true
+
+postgresql:
+  enabled: true
+  auth:
+    existingSecret: authentik-database-secret
+    secretKeys:
+      adminPasswordKey: password
+      userPasswordKey: password
+    username: authentik
+    database: authentik
