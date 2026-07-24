@@ -1,5 +1,8 @@
 # Artifact Hub: https://artifacthub.io/packages/helm/goauthentik/authentik
 
+# helm repo add goauthentik https://charts.goauthentik.io/
+# helm install authentik goauthentik/authentik --values values.yaml -n erinome
+
 global:
   namespaceOverride: erinome
 
@@ -12,6 +15,7 @@ server:
   ingress:
     annotations:
       app.kubernetes.io/ingress.class: traefik
+      cert-manager.io/cluster-issuer: cert-manager-cluster-issuer
     enabled: true
     hosts:
       - idp.caenen.net
@@ -59,3 +63,10 @@ postgresql:
       userPasswordKey: password
     username: authentik
     database: authentik
+  primary:
+    persistence:
+      enabled: true
+      storageClass: nfs
+      accessModes:
+        - ReadWriteOnce
+      size: 5Gi
