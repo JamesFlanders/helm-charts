@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.app }}-bluemap-ingress
   annotations:
     app.kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: "cert-manager-cluster-issuer"
 spec:
   tls:
     - hosts:
