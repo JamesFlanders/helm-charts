@@ -423,6 +423,22 @@ entries:
     version: 0.1.0
   sonarqube:
   - apiVersion: v2
+    created: "2026-07-24T15:14:00.610036393Z"
+    description: Helm chart used to deploy the NodeRED for Kubernetes
+    digest: 8a2cc80d2291e04663c9cfcbc36c48c05a0a123d00164e02c0427752bc1b39b7
+    home: https://www.sonarsource.com/products/sonarqube/
+    icon: https://assets-eu-01.kc-usercontent.com/ef593040-b591-0198-9506-ed88b30bc023/8e59bcad-6e39-41dc-abd9-a0e251e8d63f/Sonar%20%282%29.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: sonarqube
+    sources:
+    - https://medium.com/@denis.verkhovsky/sonarqube-with-docker-compose-complete-tutorial-2aaa8d0771d4
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/sonarqube-0.1.8/sonarqube-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     created: "2026-05-14T20:39:32.759372416Z"
     description: Helm chart used to deploy the NodeRED for Kubernetes
     digest: ee19912a67afb4d06223f13ed80213e87c348892a79cb1221075e0e859a620d2
@@ -577,4 +593,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
     version: 0.1.4
-generated: "2026-07-07T13:24:34.332725724Z"
+generated: "2026-07-24T15:14:00.610156047Z"
