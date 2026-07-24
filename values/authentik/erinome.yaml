@@ -18,11 +18,11 @@ server:
       cert-manager.io/cluster-issuer: cert-manager-cluster-issuer
     enabled: true
     hosts:
-      - idp.caenen.net
+      - authentik.caenen.net
     tls:
       - hosts:
-          - idp.caenen.net
-        secretName: idp-caenen-net-tls
+          - authentik.caenen.net
+        secretName: authentik-caenen-net-tls
   env:
     - name: AUTHENTIK_SECRET_KEY
       valueFrom:
