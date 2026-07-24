@@ -20,6 +20,8 @@ spec:
           name: http
           protocol: TCP
         env:
+          - name: SONAR_WEB_URL
+            value: "https://{{ .Values.host }}"
           - name: SONAR_JDBC_URL
             valueFrom:
               secretKeyRef:
