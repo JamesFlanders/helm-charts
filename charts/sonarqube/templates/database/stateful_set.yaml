@@ -34,7 +34,7 @@ spec:
               value: sonar
           volumeMounts:
             - name: {{ .Values.app }}-postgresql-pvc
-              mountPath: /var/lib/postgresql
+              mountPath: /var/lib/postgresql/data
   volumeClaimTemplates:
   - metadata:
       name: {{ .Values.app }}-postgresql-pvc
