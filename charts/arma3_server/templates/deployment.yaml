@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}
-          image: "ghcr.io/jamesflanders/arma3server:{{ .Values.tag }}"
+          image: "ghcr.io/brettmayson/arma3server/arma3server:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
             - containerPort: 2302
@@ -45,8 +45,8 @@ spec:
                   name: {{ .Values.secret_name }}
             - name: STEAM_BRANCH
               value: public
-            - name: SKIP_INSTALL
-              value: "true"
+            - name: MODS_PRESET
+              value: "/arma3/server/mods.html"
           volumeMounts:
             - name: {{ .Values.app }}-server
               mountPath: /arma3/server
