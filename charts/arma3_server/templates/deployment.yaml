@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app }}
-          image: "ghcr.io/brettmayson/arma3server/arma3server:{{ .Values.tag }}"
+          image: "ghcr.io/jamesflanders/arma3server:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
             - containerPort: 2302
