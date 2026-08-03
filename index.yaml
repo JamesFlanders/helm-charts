@@ -598,6 +598,19 @@ entries:
     version: 0.1.0
   teamspeak6-server:
   - apiVersion: v1
+    created: "2026-08-03T18:05:59.056246218Z"
+    description: Helm chart used to deploy a Teamspeak 6 Server
+    digest: 99375af1e301ceca14289867d8feed93f6e2f894fa99d789279497ac3a939ddd
+    home: https://teamspeak.com/en/
+    icon: https://teamspeak.com/user/themes/teamspeak/images/logo_inverse.svg
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: teamspeak6-server
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.6/teamspeak6-server-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v1
     created: "2026-07-01T16:08:55.260845801Z"
     description: Helm chart used to deploy a Teamspeak 6 Server
     digest: 20932404b76cf02365c2f754571324da93f9a4b0494bcdd0c2882563921bc4d8
@@ -623,4 +636,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
     version: 0.1.4
-generated: "2026-07-28T16:02:15.070017909Z"
+generated: "2026-08-03T18:05:59.056298766Z"
