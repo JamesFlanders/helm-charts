@@ -4,7 +4,7 @@ description: Helm chart used to deploy the Ollama for Kubernetes
 home: https://ollama.com/
 icon: https://ollama.com/public/ollama.png
 
-version: 0.1.1
+version: 0.1.2
 
 maintainers:
     - name: James Flanders
