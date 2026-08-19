@@ -25,4 +25,4 @@ host: "ollama.caenen.net"
 storage_class_name: "nfs"
 
 # Size of the PersistentVolumeClaim.
-storage_size: "1Gi"
+storage_size: "15Gi"
