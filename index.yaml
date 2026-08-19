@@ -360,6 +360,19 @@ entries:
     version: 0.1.0
   ollama:
   - apiVersion: v1
+    created: "2026-08-19T13:30:33.421517321Z"
+    description: Helm chart used to deploy the Ollama for Kubernetes
+    digest: eca74eee20f6e24beebb252842a866aa8e235ec34739141bda30989696aa5b8f
+    home: https://ollama.com/
+    icon: https://ollama.com/public/ollama.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: ollama
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/ollama-0.1.1/ollama-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     created: "2026-08-19T12:38:56.379723696Z"
     description: Helm chart used to deploy the Ollama for Kubernetes
     digest: 5667b821d7ece8ecdc151f2714879d2842acffa5f5c212e5815f863a4f92bf05
@@ -650,4 +663,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
     version: 0.1.4
-generated: "2026-08-19T12:38:56.379829024Z"
+generated: "2026-08-19T13:30:33.421694613Z"
