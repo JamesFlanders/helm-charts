@@ -25,11 +25,11 @@ spec:
               value: "30m"
           resources:
             requests:
-              cpu: "1"
-              memory: "4Gi"
-            limits:
-              cpu: "4"
+              cpu: "2"
               memory: "8Gi"
+            limits:
+              cpu: "8"
+              memory: "16Gi"
           volumeMounts:
             - name: {{ .Values.app }}-ollama
               mountPath: /root/.ollama
