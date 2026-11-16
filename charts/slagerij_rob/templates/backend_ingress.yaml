@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - {{ .Values.backend_url }}
+        - {{ .Values.backend_url | trimPrefix "https://" }}
       secretName: {{ .Values.app }}-backend-caenen-net-tls
   rules:
-    - host: {{ .Values.backend_url }}
+    - host: {{ .Values.backend_url | trimPrefix "https://" }}
       http:
         paths:
           - path: /
