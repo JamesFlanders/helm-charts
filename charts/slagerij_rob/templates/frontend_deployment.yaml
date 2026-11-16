@@ -20,3 +20,6 @@ spec:
         - containerPort: 8080
           name: http
           protocol: TCP
+        env:
+          - name: BACKEND_URL
+            value: {{ .Values.backend_url }}

@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - slagerij-rob-backend.caenen.net
+        - {{ .Values.backend_url }}
       secretName: {{ .Values.app }}-backend-caenen-net-tls
   rules:
-    - host: slagerij-rob-backend.caenen.net
+    - host: {{ .Values.backend_url }}
       http:
         paths:
           - path: /
