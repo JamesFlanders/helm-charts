@@ -6,7 +6,7 @@ icon: https://i.imgur.com/sD0RTlG.png
 
 type: application
 
-version: 0.1.1
+version: 0.1.2
 
 sources:
   - https://github.com/JamesFlanders/slagerij-rob-backend

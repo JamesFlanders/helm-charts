@@ -17,7 +17,7 @@ tag_database: 17.6-alpine
 # Name of the DNS record to link to the container.
 host: "slagerij-rob.caenen.net"
 
-backend_url: "slagerij-rob-backend.caenen.net"
+backend_url: "https://slagerij-rob-backend.caenen.net"
 
 # Secret for the PostgreSQL Database
 secret_name: "slagerij-rob-database-secret"
