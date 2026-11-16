@@ -507,6 +507,24 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/project-send-0.1.0/project-send-0.1.0.tgz
     version: 0.1.0
+  slagerij-rob:
+  - apiVersion: v2
+    created: "2026-11-16T12:05:52.912759161Z"
+    description: Helm chart used to deploy the Slagerij Rob application for Kubernetes
+    digest: ce9c3d3926a991191353f627b499a1303085e143702165f66bbc2b68ab818a7a
+    home: https://github.com/JamesFlanders/
+    icon: https://i.imgur.com/sD0RTlG.png
+    maintainers:
+    - email: jens.caenen@telenet.be
+      name: James Flanders
+    name: slagerij-rob
+    sources:
+    - https://github.com/JamesFlanders/slagerij-rob-backend
+    - https://github.com/JamesFlanders/slagerij-rob-frontend
+    type: application
+    urls:
+    - https://github.com/JamesFlanders/helm-charts/releases/download/slagerij-rob-0.1.1/slagerij-rob-0.1.1.tgz
+    version: 0.1.1
   sonarqube:
   - apiVersion: v2
     created: "2026-07-24T15:14:00.610036393Z"
@@ -705,4 +723,4 @@ entries:
     urls:
     - https://github.com/JamesFlanders/helm-charts/releases/download/teamspeak6-server-0.1.4/teamspeak6-server-0.1.4.tgz
     version: 0.1.4
-generated: "2026-11-08T12:34:05.725271984Z"
+generated: "2026-11-16T12:05:52.912806993Z"
